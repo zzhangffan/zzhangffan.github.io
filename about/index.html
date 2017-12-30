@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="张帆 zhangfan zzhangffan"/>
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="张2017">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="zzhangffan.com/about/"/>
+
+
+<meta name="description" content="#coolImg {         position: absolute;         top: : 20px;         right: 170px;     }   关于我&amp;ensp;&amp;ensp;男，99年生人，16年2月起培训，工作近年吧的Java从业者，这是一个非全技术的博客！ 社交账号 GitHub:    zzhangffan QQ:    2300650579">
+<meta property="og:type" content="website">
+<meta property="og:title" content="张2017">
+<meta property="og:url" content="zzhangffan.com/about/index.html">
+<meta property="og:site_name" content="张2017">
+<meta property="og:description" content="#coolImg {         position: absolute;         top: : 20px;         right: 170px;     }   关于我&amp;ensp;&amp;ensp;男，99年生人，16年2月起培训，工作近年吧的Java从业者，这是一个非全技术的博客！ 社交账号 GitHub:    zzhangffan QQ:    2300650579">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="/images/cool.jpg">
+<meta property="og:updated_time" content="2017-12-30T15:26:54.242Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="张2017">
+<meta name="twitter:description" content="#coolImg {         position: absolute;         top: : 20px;         right: 170px;     }   关于我&amp;ensp;&amp;ensp;男，99年生人，16年2月起培训，工作近年吧的Java从业者，这是一个非全技术的博客！ 社交账号 GitHub:    zzhangffan QQ:    2300650579">
+<meta name="twitter:image" content="/images/cool.jpg">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title>  - 张2017 </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">张2017</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        <article class="post">
+            <header class="post-header">
+                <h1 class="post-title">
+                    
+                </h1>
+            </header>
+            <div class="post-content">
+                <p><img src="/images/cool.jpg" alt="a cool img" id="coolImg"></p>
+<style type="text/css">
+    #coolImg {
+        position: absolute;
+        top: : 20px;
+        right: 170px;
+    }
+</style>
+
+<h4 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h4><p>&ensp;&ensp;男，99年生人，16年2月起培训，工作近年吧的Java从业者，这是一个非全技术的博客！</p>
+<h4 id="社交账号"><a href="#社交账号" class="headerlink" title="社交账号"></a>社交账号</h4><ul>
+<li>GitHub:    <a href="https://github.com/zzhangffan" target="_blank" rel="noopener">zzhangffan</a></li>
+<li>QQ:    2300650579</li>
+<li>WeChat:    FANZ0503z</li>
+<li>Email:zzhangffan1@163.com | fan.zhang@powersi.com.cn(单位邮箱)</li>
+<li>微博:    <a href="https://weibo.com/6208723644" target="_blank" rel="noopener">用户张Z</a></li>
+</ul>
+<script type="text/javascript">
+    var userAgent = navigator.userAgent;
+    var img = document.getElementById("coolImg");
+    if (/(?:Android|iPhone|SymbianOS|Windows Phone|iPad|iPod)/.test(userAgent)) {
+        var Ele = document.createElement("img");
+        Ele.src = "/images/cool.jpg";
+        Ele.alt = "a cool img";
+        var parentNode = img.parentNode;
+        parentNode.appendChild(Ele);
+        parentNode.removeChild(img);
+        alert("移动端浏览");
+    } else {
+        alert("PC端浏览");
+    }
+
+    var docEle = document.documentElement;
+    var clientHeight = docEle.clientHeight,
+        clientWidth = docEle.clientWidth;
+
+    const imgHeight = img.height;
+    const imgWidth = img.width;
+    var maxX = clientWidth - imgWidth,
+        maxY = clientHeight - imgHeight;
+    var isMouseDown = false, topDiff = 0, leftDiff = 0,
+        intX = 0, intY = 0;
+    function mousemove() {
+        if (!isMouseDown)
+            return;
+        intX = getClientXOrY("X");
+        intY = getClientXOrY("y");
+        var finalX = intX - leftDiff;
+        var finalY = intY - topDiff;
+        if (finalX > maxX)
+            finalX = maxX;
+        if (finalY > maxY)
+            finalY = maxY;
+        img.style.left = finalX + "px";
+        img.style.top = finalY + "px";
+    }
+
+    function mouseup() {
+        isMouseDown = false;
+    }
+
+    function mousedown() {
+        if (!isMouseDown)
+            isMouseDown = true;
+        intX = getClientXOrY("X");
+        intY = getClientXOrY("y");
+        leftDiff = intX - img.offsetLeft;
+        topDiff = intY - img.offsetTop;
+        return false;
+    }
+
+    img.onmousedown = mousedown;
+
+    document.onmouseup = mouseup;
+    document.onmousemove = mousemove;
+
+    function getClientXOrY(xOrY) {
+        var event = window.event;
+        if ("X" == xOrY || "x" == xOrY)
+            return event.clientX;
+        else if ("Y" == xOrY || "y" == xOrY)
+            return event.clientY;
+    }
+
+    window.onresize = function() {
+        //重新获取窗口大小
+        clientHeight = docEle.clientHeight,
+        clientWidth = docEle.clientWidth;
+        maxX = clientWidth - imgWidth;
+        maxY = clientHeight - imgHeight;
+    }
+</script>
+            </div>
+        </article>
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+    2017
+    <span class="footer-author">fanzhang.</span>
+    <span class="power-by">
+        由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/henryhuang/hexo-theme-polarbearsimple">Polar Bear Simple</a> 强力驱动
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
