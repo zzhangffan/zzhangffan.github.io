@@ -1,7 +1,7 @@
 ---
 title: 用 Hexo + GitHub Pages 搭建个人博客
 date: 2017-12-31 11:39:56
-tags:
+tags: Hexo
 ---
 > ## 准备工具
 
@@ -54,7 +54,7 @@ tags:
 ```
 ![see_Hexo_version.png](/images/Use_Hexo-GitHubPages_bulid_personal_blog/see_Hexo_version.png)
 ### 创建一个目录用于存放Hexo相关文件，如： ` $ mkdir Hexo ` 
-### 使用命令 ` hexo init Hexo ` 或进入目录执行命令 ` hexo init `
+### 使用命令 ` hexo init [目录名] ` 或进入目录执行命令 ` hexo init `
 ![command_hexo-init.png](/images/Use_Hexo-GitHubPages_bulid_personal_blog/command_hexo-init.png)
 ### Hexo会自动在这个目录下建立需要的文件夹和文件，[目录介绍](https://hexo.io/zh-cn/docs/setup.html)
 ![hexo-inited_dirStructure.png](/images/Use_Hexo-GitHubPages_bulid_personal_blog/hexo-inited_dirStructure.png)
@@ -93,7 +93,7 @@ tags:
 > ### 部署提示找不到：git
 >> 3.0 后 type需改为 git ，deploy部分被单独出来了，需要单独安装
 
-## 安装 hexo-deployerp-git
+## 安装 hexo-deployer-git
 ```
 	$ npm install hexo-deployer-git --save
 ```

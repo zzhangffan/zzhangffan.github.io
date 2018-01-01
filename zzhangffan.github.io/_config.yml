@@ -55,6 +55,9 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  Hexo: Hexo
+  生活: life
+  Java: Java
 tag_map:
 
 # Date / Time format
@@ -81,3 +84,11 @@ deploy:
   repository: git@github.com:zzhangffan/zzhangffan.github.io.git
   branch: master
 
+
+# Disqus
+disqus_shortname: ffanzzhang
+
+# plugins
+plugins:
+  hexo-generator-feed
+  hexo-generator-sitemap
