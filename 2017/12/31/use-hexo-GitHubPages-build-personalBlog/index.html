@@ -12,7 +12,7 @@
 
 
 
-  <meta name="description" content="使用hexo+GitHub Pages搭建个人博客"/>
+  <meta name="description" content="使用Hexo+GitHub Pages搭建个人博客"/>
 
 
 
@@ -33,29 +33,25 @@
 <link rel="canonical" href="zzhangffan.com/2017/12/31/use-hexo-GitHubPages-build-personalBlog/"/>
 
 
-<meta name="description" content="准备工具 Node.js（必须）用于支持hexo，生成静态页面 Git（必须）用于推送本地内容 注册一个GitHib账号（必须）存放文件，服务器  搭建环境 Node.jsWindows官网下载.msi文件到本地，双击安装即可 Linux(CentOS)使用命令sudo yum install nodejs安装Node.js需要下载安装一系列依赖，输入y后回车，安装完成后，使用命令node -v检">
+<meta name="description" content="准备工具  Node.js（必须）用于支持Hexo，生成静态页面 Git（必须）用于推送本地内容 注册一个GitHib账号（必须）存放文件，服务器   搭建环境  Node.jsWindows官网下载.msi文件到本地，双击安装即可 Linux(CentOS)1$ sudo yum install nodejs  GitWindows官网下载安装软件包到本地，双击安装即可 Linux(CentO">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用hexo+GitHub Pages搭建个人博客">
+<meta property="og:title" content="使用Hexo+GitHub Pages搭建个人博客">
 <meta property="og:url" content="zzhangffan.com/2017/12/31/use-hexo-GitHubPages-build-personalBlog/index.html">
 <meta property="og:site_name" content="张帆">
-<meta property="og:description" content="准备工具 Node.js（必须）用于支持hexo，生成静态页面 Git（必须）用于推送本地内容 注册一个GitHib账号（必须）存放文件，服务器  搭建环境 Node.jsWindows官网下载.msi文件到本地，双击安装即可 Linux(CentOS)使用命令sudo yum install nodejs安装Node.js需要下载安装一系列依赖，输入y后回车，安装完成后，使用命令node -v检">
+<meta property="og:description" content="准备工具  Node.js（必须）用于支持Hexo，生成静态页面 Git（必须）用于推送本地内容 注册一个GitHib账号（必须）存放文件，服务器   搭建环境  Node.jsWindows官网下载.msi文件到本地，双击安装即可 Linux(CentOS)1$ sudo yum install nodejs  GitWindows官网下载安装软件包到本地，双击安装即可 Linux(CentO">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/centos_install_node1.png">
-<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/centos_install_node2.png">
-<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/register_GitHub_account1.png">
-<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/register_GitHub_account2.png">
-<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/register_GitHub_account3.png">
-<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/create_GitHubPages_repository1.png">
-<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/register_GitHub_account4.png">
-<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/register_GitHub_account5.png">
-<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/create_GitHubPages_repository2.png">
-<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/create_GitHubPages_repository3.png">
-<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/create_GitHubPages_repository4.png">
-<meta property="og:updated_time" content="2017-12-31T16:22:09.169Z">
+<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/call_GitHub-Pages.png">
+<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/see_Hexo_version.png">
+<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/command_hexo-init.png">
+<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/hexo-inited_dirStructure.png">
+<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/command_npm-install.png">
+<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/index.png">
+<meta property="og:image" content="/images/use_hexo_GitHubPages_build_personalBlog/command_hexo-d.png">
+<meta property="og:updated_time" content="2018-01-01T05:02:42.860Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用hexo+GitHub Pages搭建个人博客">
-<meta name="twitter:description" content="准备工具 Node.js（必须）用于支持hexo，生成静态页面 Git（必须）用于推送本地内容 注册一个GitHib账号（必须）存放文件，服务器  搭建环境 Node.jsWindows官网下载.msi文件到本地，双击安装即可 Linux(CentOS)使用命令sudo yum install nodejs安装Node.js需要下载安装一系列依赖，输入y后回车，安装完成后，使用命令node -v检">
-<meta name="twitter:image" content="/images/use_hexo_GitHubPages_build_personalBlog/centos_install_node1.png">
+<meta name="twitter:title" content="使用Hexo+GitHub Pages搭建个人博客">
+<meta name="twitter:description" content="准备工具  Node.js（必须）用于支持Hexo，生成静态页面 Git（必须）用于推送本地内容 注册一个GitHib账号（必须）存放文件，服务器   搭建环境  Node.jsWindows官网下载.msi文件到本地，双击安装即可 Linux(CentOS)1$ sudo yum install nodejs  GitWindows官网下载安装软件包到本地，双击安装即可 Linux(CentO">
+<meta name="twitter:image" content="/images/use_hexo_GitHubPages_build_personalBlog/call_GitHub-Pages.png">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1.1" />
@@ -80,7 +76,7 @@
 
 
 
-    <title> 使用hexo+GitHub Pages搭建个人博客 - 张帆 </title>
+    <title> 使用Hexo+GitHub Pages搭建个人博客 - 张帆 </title>
   </head>
 
   <body>
@@ -117,7 +113,7 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          使用hexo+GitHub Pages搭建个人博客
+          使用Hexo+GitHub Pages搭建个人博客
         
       </h1>
 
@@ -130,36 +126,54 @@
 
     
             <div class="post-content">
-            <h1 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h1><ul>
-<li>Node.js（必须）用于支持hexo，生成静态页面</li>
+            <blockquote>
+<h2 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h2></blockquote>
+<ul>
+<li>Node.js（必须）用于支持Hexo，生成静态页面</li>
 <li>Git（必须）用于推送本地内容</li>
 <li>注册一个GitHib账号（必须）存放文件，服务器</li>
 </ul>
-<h1 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h1><ol>
+<blockquote>
+<h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2></blockquote>
+<ol>
 <li><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a><em>Node.js</em></h2><h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a><em>Windows</em></h1><p><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">官网</a>下载.msi文件到本地，双击安装即可</p>
-<h1 id="Linux-CentOS"><a href="#Linux-CentOS" class="headerlink" title="Linux(CentOS)"></a><em>Linux(CentOS)</em></h1><p>使用命令<code>sudo yum install nodejs</code>安装Node.js<br><img src="/images/use_hexo_GitHubPages_build_personalBlog/centos_install_node1.png" alt="centos_install_node1.png"><br>需要下载安装一系列依赖，输入y后回车，安装完成后，使用命令<code>node -v</code>检验安装版本<br>我的输出如图，出现类似信息即可<br><img src="/images/use_hexo_GitHubPages_build_personalBlog/centos_install_node2.png" alt="centos_install_node2.png"></p>
+<h1 id="Linux-CentOS"><a href="#Linux-CentOS" class="headerlink" title="Linux(CentOS)"></a><em>Linux(CentOS)</em></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum install nodejs</span><br></pre></td></tr></table></figure>
 </li>
 <li><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a><em>Git</em></h2><h1 id="Windows-1"><a href="#Windows-1" class="headerlink" title="Windows"></a><em>Windows</em></h1><p><a href="https://git-scm.com/" target="_blank" rel="noopener">官网</a>下载安装软件包到本地，双击安装即可</p>
-<h1 id="Linux-CentOS-1"><a href="#Linux-CentOS-1" class="headerlink" title="Linux(CentOS)"></a><em>Linux(CentOS)</em></h1><p><a href="http://www.linuxidc.com/Linux/2015-02/113351.htm" target="_blank" rel="noopener">参考：如何在CentOS 7中安装Git</a></p>
+<h1 id="Linux-CentOS-1"><a href="#Linux-CentOS-1" class="headerlink" title="Linux(CentOS)"></a><em>Linux(CentOS)</em></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install git</span><br></pre></td></tr></table></figure>
 </li>
-<li><h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a><em>GitHub</em></h2><p><a href="https://github.com/join?source=header-home" target="_blank" rel="noopener">去注册一个GitHub账号</a> 填写示例如下图：</p>
-<h3 id="填写用户名、邮箱和密码"><a href="#填写用户名、邮箱和密码" class="headerlink" title="填写用户名、邮箱和密码"></a>填写用户名、邮箱和密码</h3><p><img src="/images/use_hexo_GitHubPages_build_personalBlog/register_GitHub_account1.png" alt="注册GitHub账号例图1"></p>
-<h3 id="选择个人计划，默认就行"><a href="#选择个人计划，默认就行" class="headerlink" title="选择个人计划，默认就行"></a>选择个人计划，默认就行</h3><p><img src="/images/use_hexo_GitHubPages_build_personalBlog/register_GitHub_account2.png" alt="注册GitHub账号例图2"></p>
-<h3 id="注册完整进入首页如图后"><a href="#注册完整进入首页如图后" class="headerlink" title="注册完整进入首页如图后"></a>注册完整进入首页如图后</h3><p><img src="/images/use_hexo_GitHubPages_build_personalBlog/register_GitHub_account3.png" alt="注册GitHub账号例图3"></p>
-</li>
-<li><h2 id="创建一个仓库做GitHub-Pages（What-is-GitHub-Pages-）"><a href="#创建一个仓库做GitHub-Pages（What-is-GitHub-Pages-）" class="headerlink" title="创建一个仓库做GitHub Pages（What is GitHub Pages?）"></a><em>创建一个仓库做GitHub Pages（<a href="https://help.github.com/articles/what-is-github-pages/" target="_blank" rel="noopener">What is GitHub Pages?</a>）</em></h2><h2 id="进入刚注册的GitHub账户首页后，点击红圈处按钮"><a href="#进入刚注册的GitHub账户首页后，点击红圈处按钮" class="headerlink" title="进入刚注册的GitHub账户首页后，点击红圈处按钮"></a>进入刚注册的GitHub账户首页后，点击红圈处按钮</h2><p><img src="/images/use_hexo_GitHubPages_build_personalBlog/create_GitHubPages_repository1.png" alt="创建GitHub Pages仓库例图1"><br><img src="/images/use_hexo_GitHubPages_build_personalBlog/register_GitHub_account4.png" alt="注册GitHub账号例图4"></p>
-<h3 id="提示请验证邮箱，刚紧去你的邮箱看看吧，打开邮件点击红框中链接进行验证"><a href="#提示请验证邮箱，刚紧去你的邮箱看看吧，打开邮件点击红框中链接进行验证" class="headerlink" title="提示请验证邮箱，刚紧去你的邮箱看看吧，打开邮件点击红框中链接进行验证"></a>提示请验证邮箱，刚紧去你的邮箱看看吧，打开邮件点击红框中链接进行验证</h3><p><img src="/images/use_hexo_GitHubPages_build_personalBlog/register_GitHub_account5.png" alt="注册GitHub账号例图5"></p>
-<h3 id="跳转如下页面，填写相关信息"><a href="#跳转如下页面，填写相关信息" class="headerlink" title="跳转如下页面，填写相关信息"></a>跳转如下页面，填写相关信息</h3><p><img src="/images/use_hexo_GitHubPages_build_personalBlog/create_GitHubPages_repository2.png" alt="创建GitHub Pages仓库例图2"></p>
-<h3 id="点击创建仓库"><a href="#点击创建仓库" class="headerlink" title="点击创建仓库"></a>点击创建仓库</h3><p><img src="/images/use_hexo_GitHubPages_build_personalBlog/create_GitHubPages_repository3.png" alt="创建GitHub Pages仓库例图3"></p>
-<h3 id="现在可以用你刚建立的仓库名称访问你的GitHub-Pages了"><a href="#现在可以用你刚建立的仓库名称访问你的GitHub-Pages了" class="headerlink" title="现在可以用你刚建立的仓库名称访问你的GitHub Pages了"></a>现在可以用你刚建立的仓库名称访问你的GitHub Pages了</h3><p><img src="/images/use_hexo_GitHubPages_build_personalBlog/create_GitHubPages_repository4.png" alt="创建GitHub Pages仓库例图4"></p>
+<li><h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a><em>GitHub</em></h2><p><a href="https://github.com/join?source=header-home" target="_blank" rel="noopener">去注册一个GitHub账号</a></p>
+<h3 id="关联Git和GitHub"><a href="#关联Git和GitHub" class="headerlink" title="关联Git和GitHub"></a>关联Git和GitHub</h3><h3 id="生成SSH密匙-输入下面命令后，一路回车即可"><a href="#生成SSH密匙-输入下面命令后，一路回车即可" class="headerlink" title="生成SSH密匙 输入下面命令后，一路回车即可"></a>生成SSH密匙 输入下面命令后，一路回车即可</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;你的邮箱地址&quot;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<style type="text/css">
-    blockquote {
-        margin: 1em 0;
-    }
-</style>
-
+<h3 id="配置GitHub-SSH-Key，登录GitHub账号-》settings-》SSH-AND-GPG-keys"><a href="#配置GitHub-SSH-Key，登录GitHub账号-》settings-》SSH-AND-GPG-keys" class="headerlink" title="配置GitHub SSH Key，登录GitHub账号=》settings=》SSH AND GPG keys"></a>配置GitHub SSH Key，登录GitHub账号=》settings=》<a href="https://github.com/settings/keys" target="_blank" rel="noopener">SSH AND GPG keys</a></h3><ol>
+<li><h2 id="创建一个仓库做GitHub-Pages（What-is-GitHub-Pages-）"><a href="#创建一个仓库做GitHub-Pages（What-is-GitHub-Pages-）" class="headerlink" title="创建一个仓库做GitHub Pages（What is GitHub Pages?）"></a><em>创建一个仓库做GitHub Pages（<a href="https://help.github.com/articles/what-is-github-pages/" target="_blank" rel="noopener">What is GitHub Pages?</a>）</em></h2><h2 id="注意点："><a href="#注意点：" class="headerlink" title="注意点："></a>注意点：</h2>&emsp;&emsp;<em>1.第一次需要验证邮箱</em><br>&emsp;&emsp;<em>2.仓库名称固定格式为： 你的GitHub用户名.github.io</em><h3 id="创建成功后，现在可以用你的仓库名称访问你的GitHub-Pages了"><a href="#创建成功后，现在可以用你的仓库名称访问你的GitHub-Pages了" class="headerlink" title="创建成功后，现在可以用你的仓库名称访问你的GitHub Pages了"></a>创建成功后，现在可以用你的仓库名称访问你的GitHub Pages了</h3><img src="/images/use_hexo_GitHubPages_build_personalBlog/call_GitHub-Pages.png" alt="GitHub Pages.png"></li>
+</ol>
+<blockquote>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
+<h3 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo -v</span><br></pre></td></tr></table></figure>
+<p><img src="/images/use_hexo_GitHubPages_build_personalBlog/see_Hexo_version.png" alt="see_Hexo_version.png"></p>
+<h3 id="创建一个目录用于存放Hexo相关文件，如：-mkdir-Hexo"><a href="#创建一个目录用于存放Hexo相关文件，如：-mkdir-Hexo" class="headerlink" title="创建一个目录用于存放Hexo相关文件，如： $ mkdir Hexo"></a>创建一个目录用于存放Hexo相关文件，如： <code>$ mkdir Hexo</code></h3><h3 id="使用命令-hexo-init-Hexo-或进入目录执行命令-hexo-init"><a href="#使用命令-hexo-init-Hexo-或进入目录执行命令-hexo-init" class="headerlink" title="使用命令 hexo init Hexo 或进入目录执行命令 hexo init"></a>使用命令 <code>hexo init Hexo</code> 或进入目录执行命令 <code>hexo init</code></h3><p><img src="/images/use_hexo_GitHubPages_build_personalBlog/command_hexo-init.png" alt="command_hexo-init.png"></p>
+<h3 id="Hexo会自动在这个目录下建立需要的文件夹和文件，目录介绍"><a href="#Hexo会自动在这个目录下建立需要的文件夹和文件，目录介绍" class="headerlink" title="Hexo会自动在这个目录下建立需要的文件夹和文件，目录介绍"></a>Hexo会自动在这个目录下建立需要的文件夹和文件，<a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="noopener">目录介绍</a></h3><p><img src="/images/use_hexo_GitHubPages_build_personalBlog/hexo-inited_dirStructure.png" alt="hexo-inited_dirStructure.png"></p>
+<h3 id="进入目录使用命令-npm-install-安装依赖"><a href="#进入目录使用命令-npm-install-安装依赖" class="headerlink" title="进入目录使用命令 npm install 安装依赖"></a>进入目录使用命令 <code>npm install</code> 安装依赖</h3><p><img src="/images/use_hexo_GitHubPages_build_personalBlog/command_npm-install.png" alt="command_npm-install.png"></p>
+<blockquote>
+<h2 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h2></blockquote>
+<h3 id="生成静态页面和资源文件"><a href="#生成静态页面和资源文件" class="headerlink" title="生成静态页面和资源文件"></a>生成静态页面和资源文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate	简写：hexo g</span><br></pre></td></tr></table></figure>
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server 简写：hexo s</span><br></pre></td></tr></table></figure>
+<h3 id="命令可以组合使用，如-hexo-s-g-更多命令查看Hexo文档"><a href="#命令可以组合使用，如-hexo-s-g-更多命令查看Hexo文档" class="headerlink" title="命令可以组合使用，如 $ hexo s -g 更多命令查看Hexo文档"></a>命令可以组合使用，如 <code>$ hexo s -g</code> <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">更多命令查看Hexo文档</a></h3><h3 id="现在你可以通过-http-localhost-4000-进行访问了"><a href="#现在你可以通过-http-localhost-4000-进行访问了" class="headerlink" title="现在你可以通过 http://localhost:4000/ 进行访问了"></a>现在你可以通过 <code>http://localhost:4000/</code> 进行访问了</h3><p><img src="/images/use_hexo_GitHubPages_build_personalBlog/index.png" alt="index.png"></p>
+<blockquote>
+<h2 id="部署至GitHub"><a href="#部署至GitHub" class="headerlink" title="部署至GitHub"></a>部署至GitHub</h2></blockquote>
+<p>修改Hexo根目录下的 <code>_config.yml</code> 主站配置文件中的 <code>deploy</code> 参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line"> 	  type: git</span><br><span class="line"> 	  repo: &lt;仓库地址&gt;</span><br><span class="line"> 	  branch: [分支名称]</span><br><span class="line"> 	  message: [提交信息]</span><br></pre></td></tr></table></figure></p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy 简写： hexo d</span><br></pre></td></tr></table></figure>
+<p><img src="/images/use_hexo_GitHubPages_build_personalBlog/command_hexo-d.png" alt="command_hexo-d.png"></p>
+<blockquote>
+<h3 id="部署提示找不到：git"><a href="#部署提示找不到：git" class="headerlink" title="部署提示找不到：git"></a>部署提示找不到：git</h3><blockquote>
+<p>3.0 后 type需改为 git ，deploy部分被单独出来了，需要单独安装</p>
+</blockquote>
+</blockquote>
+<h2 id="安装-hexo-deployerp-git"><a href="#安装-hexo-deployerp-git" class="headerlink" title="安装 hexo-deployerp-git"></a>安装 hexo-deployerp-git</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h2 id="再-hexo-d"><a href="#再-hexo-d" class="headerlink" title="再 hexo d"></a>再 <code>hexo d</code></h2>
             </div>
           
 
