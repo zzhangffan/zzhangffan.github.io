@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>zzhangffan.com/about/index.html</loc>
+    
+    <lastmod>2018-01-02T02:16:08.853Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>zzhangffan.com/2017/12/31/Use_Hexo-GitHubPages_bulid_personal_blog/</loc>
     
-    <lastmod>2018-01-01T13:18:58.562Z</lastmod>
+    <lastmod>2018-01-02T01:53:51.301Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>zzhangffan.com/now-news/index.html</loc>
     
     <lastmod>2018-01-01T08:46:10.740Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>zzhangffan.com/about/index.html</loc>
-    
-    <lastmod>2017-12-31T03:26:55.925Z</lastmod>
     
   </url>
   
