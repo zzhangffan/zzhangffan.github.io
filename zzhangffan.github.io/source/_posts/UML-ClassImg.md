@@ -14,7 +14,7 @@ tags: UML
 
 1. 类名
 <span style="color: red;font-size: 20px;">
-普通类用 __ ` 正体字 ` __ 书写 | 接口名称上方加 ` << interface >> ` 表示 | 抽象类用 __ ` 斜体字 ` __ 书写</span>
+普通类用 __ ` 正体字 ` __ 书写 | 接口 a.名称上方加 ` << interface >> ` 表示 b.名称前加 ` O— ` | 抽象类用 ___ ` 斜体字 ` ___ 书写</span>
 
 2. 属性
 属性的表示方法如下：
@@ -28,6 +28,8 @@ tags: UML
 3. 方法
 类的方法的表示方法如下：
 <font color="blue">&emsp;&emsp;访问级别&emsp;&emsp;名称(参数列表)&emsp;\[ ： 返回类型\]</font>
+
+\[ps\]：静态属性和静态方法在上面的基础中加下划线表示
 
 > ## 类与类之间的关系
 
@@ -47,18 +49,20 @@ tags: UML
 ![关联示意图.png](/images/UML-ClassImg/guanlian.png)
 
 3. 聚合
-聚合的代码表现形式与关联一致，构造函数赋值，不好区分，区别在于包含关系的强弱，<span style="color:red;">聚合关系强调的是一方包含另一方，另一方可以单独出去，如汽车和轮胎</span>，在UML类图中用空心菱形箭头表示
+聚合的代码表现形式与关联一致，构造函数赋值，不好区分，区别在于包含关系的强弱，<span style="color:red;">聚合关系强调的是一方包含另一方，另一方可以单独出去，整体和个体间是可分离的，如燕群和单只燕子</span>，在UML类图中用空心菱形箭头表示
 ![聚合示意图.png](/images/UML-ClassImg/juhe.png)
 
 4. 组合
-组合的代码表现形式与关联和聚合一致，<span style="color:red;">组合关系强调的是一方和另一方是捆绑的无法单独出去，如人和大脑</span>，在UML类图中用实心菱形箭头表示
+组合的代码表现形式与关联和聚合基本一致，<span style="color:red;">组合关系强调的是整体与个体不可分离，如人和大脑，人死了，大脑的生命周期也结束了</span>，组合也成强聚合，在UML类图中用实心菱形箭头表示
 ![组合示意图.png](/images/UML-ClassImg/zuhe.png)
 
 5. 继承
 * 泛化
-代码中以 ` extends ` 关键字体现，用实线三家箭头表示
+代码中以 ` extends ` 关键字体现，用实线三角箭头表示
 ![泛化示意图.png](/images/UML-ClassImg/fanhua.png)
 
 * 实现
-代码中以 ` inplements ` 关键字体现，用虚线三角箭头表示
+代码中以 ` implements ` 关键字体现，用虚线三角箭头表示
 ![实现示意图.png](/images/UML-ClassImg/shixian.png)
+
+（完）
