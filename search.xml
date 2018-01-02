@@ -3,6 +3,63 @@
   
     
     <entry>
+      <title><![CDATA[UML类图]]></title>
+      <url>/2018/01/02/UML-ClassImg/</url>
+      <content type="html"><![CDATA[<p>最近在看设计模式的过程中发现用UML类图的地方特别多，学习了之后现在把它记录下来</p>
+<h2 id="先上一个最基本的类图示例"><a href="#先上一个最基本的类图示例" class="headerlink" title="先上一个最基本的类图示例"></a>先上一个最基本的类图示例</h2><p><img src="/images/UML-ClassImg/class.png" alt="class"></p>
+<blockquote>
+<h2 id="类的表示形式"><a href="#类的表示形式" class="headerlink" title="类的表示形式"></a>类的表示形式</h2></blockquote>
+<p>在UML类图中，类由一个矩形图案表示，从上到下分别为类名、属性以及方法。</p>
+<ol>
+<li><p>类名<br><span style="color: red;font-size: 20px;"><br>普通类用 <strong> <code>正体字</code> </strong> 书写 | 接口名称上方加 <code>&lt;&lt; interface &gt;&gt;</code> 表示 | 抽象类用 <strong> <code>斜体字</code> </strong> 书写</span></p>
+</li>
+<li><p>属性<br>属性的表示方法如下：<br><font color="blue">&emsp;&emsp;访问级别&emsp;&emsp;属性名&emsp;：&emsp;数据类型&emsp;[ = 缺省值]</font><br>其中访问级别：<br>&emsp;&emsp;— ：私有 private<br>&emsp;&emsp;+ ：公共 public<br>&emsp;&emsp;# ：受保护 protected<br>[ = 缺省值] 为可选项</p>
+</li>
+<li><p>方法<br>类的方法的表示方法如下：</p>
+<font color="blue">&emsp;&emsp;访问级别&emsp;&emsp;名称(参数列表)&emsp;[ ： 返回类型]</font>
+
+</li>
+</ol>
+<blockquote>
+<h2 id="类与类之间的关系"><a href="#类与类之间的关系" class="headerlink" title="类与类之间的关系"></a>类与类之间的关系</h2></blockquote>
+<p>类与类之间关系大致可分为：</p>
+<ul>
+<li>依赖</li>
+<li>关联</li>
+<li>聚合</li>
+<li>组合</li>
+<li>继承</li>
+</ul>
+<ol>
+<li><p>依赖<br>代码表现为：类A的方法中以局部变量、方法参数的形式存在类B的对象或调用类B的静态方法，我们说类A依赖于类B，在UML类图中用虚线箭头表示<br><img src="/images/UML-ClassImg/yilai.png" alt="依赖示意图.png"></p>
+</li>
+<li><p>关联<br>代码表现为：类A中以成员变量的形式存在类B的对象，get/set赋值，我们说类A与类B是关联的状态，<span style="color:red;">关联关系强调的是平等关系</span>，在UML类图中用实线箭头表示<br><img src="/images/UML-ClassImg/guanlian.png" alt="关联示意图.png"></p>
+</li>
+<li><p>聚合<br>聚合的代码表现形式与关联一致，构造函数赋值，不好区分，区别在于包含关系的强弱，<span style="color:red;">聚合关系强调的是一方包含另一方，另一方可以单独出去，如汽车和轮胎</span>，在UML类图中用空心菱形箭头表示<br><img src="/images/UML-ClassImg/juhe.png" alt="聚合示意图.png"></p>
+</li>
+<li><p>组合<br>组合的代码表现形式与关联和聚合一致，<span style="color:red;">组合关系强调的是一方和另一方是捆绑的无法单独出去，如人和大脑</span>，在UML类图中用实心菱形箭头表示<br><img src="/images/UML-ClassImg/zuhe.png" alt="组合示意图.png"></p>
+</li>
+<li><p>继承</p>
+</li>
+</ol>
+<ul>
+<li><p>泛化<br>代码中以 <code>extends</code> 关键字体现，用实线三家箭头表示<br><img src="/images/UML-ClassImg/fanhua.png" alt="泛化示意图.png"></p>
+</li>
+<li><p>实现<br>代码中以 <code>inplements</code> 关键字体现，用虚线三角箭头表示<br><img src="/images/UML-ClassImg/shixian.png" alt="实现示意图.png"></p>
+</li>
+</ul>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> UML </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[用 Hexo + GitHub Pages 搭建个人博客]]></title>
       <url>/2017/12/31/Use_Hexo-GitHubPages_bulid_personal_blog/</url>
       <content type="html"><![CDATA[<blockquote>
