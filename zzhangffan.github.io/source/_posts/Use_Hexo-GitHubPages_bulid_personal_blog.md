@@ -1,6 +1,7 @@
 ---
 title: 用 Hexo + GitHub Pages 搭建个人博客
 date: 2017-12-31 11:39:56
+categories: Hexo
 tags: Hexo
 ---
 > ## 准备工具

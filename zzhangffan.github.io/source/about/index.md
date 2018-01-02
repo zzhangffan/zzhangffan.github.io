@@ -11,15 +11,18 @@ date: 2017-12-29 16:48:16
 	}
 </style>
 
-#### 关于我 ####
+## 关于我
 &ensp;&ensp;男，99年生人，16年2月起培训，工作近年吧的Java从业者，这是一个非全技术的博客！
 
-#### 社交账号 ####
+## 社交账号
 * GitHub:	[zzhangffan](https://github.com/zzhangffan)
 * QQ:	2300650579
 * WeChat:	FANZ0503z
 * Email:zzhangffan1@163.com | fan.zhang@powersi.com.cn(单位邮箱)
 * 微博:	[用户张Z](https://weibo.com/6208723644)
+
+## 关于站点
+___[#RSS](/atom.xml)&ensp;&ensp;[#Sitemap](/sitemap.xml)___
 
 <script type="text/javascript">
 	var userAgent = navigator.userAgent;
@@ -31,9 +34,9 @@ date: 2017-12-29 16:48:16
 		var parentNode = img.parentNode;
 		parentNode.appendChild(Ele);
 		parentNode.removeChild(img);
-		alert("移动端浏览");
+		//alert("移动端浏览");
 	} else {
-		alert("PC端浏览");
+		//alert("PC端浏览");
 	}
 
 	var docEle = document.documentElement;

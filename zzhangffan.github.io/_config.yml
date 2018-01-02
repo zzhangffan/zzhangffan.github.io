@@ -55,9 +55,6 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
-  Hexo: Hexo
-  生活: life
-  Java: Java
 tag_map:
 
 # Date / Time format
