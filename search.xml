@@ -11,7 +11,7 @@
 <h2 id="类的表示形式"><a href="#类的表示形式" class="headerlink" title="类的表示形式"></a>类的表示形式</h2></blockquote>
 <p>在UML类图中，类由一个矩形图案表示，从上到下分别为类名、属性以及方法。</p>
 <ol>
-<li><p>类名<br><span style="color: red;font-size: 20px;"><br>普通类用 <strong> <code>正体字</code> </strong> 书写 | 接口名称上方加 <code>&lt;&lt; interface &gt;&gt;</code> 表示 | 抽象类用 <strong> <code>斜体字</code> </strong> 书写</span></p>
+<li><p>类名<br><span style="color: red;font-size: 20px;"><br>普通类用 <strong> <code>正体字</code> </strong> 书写 | 接口 a.名称上方加 <code>&lt;&lt; interface &gt;&gt;</code> 表示 b.名称前加 <code>O—</code> | 抽象类用 <strong><em> <code>斜体字</code> </em></strong> 书写</span></p>
 </li>
 <li><p>属性<br>属性的表示方法如下：<br><font color="blue">&emsp;&emsp;访问级别&emsp;&emsp;属性名&emsp;：&emsp;数据类型&emsp;[ = 缺省值]</font><br>其中访问级别：<br>&emsp;&emsp;— ：私有 private<br>&emsp;&emsp;+ ：公共 public<br>&emsp;&emsp;# ：受保护 protected<br>[ = 缺省值] 为可选项</p>
 </li>
@@ -20,6 +20,7 @@
 
 </li>
 </ol>
+<p>[ps]：静态属性和静态方法在上面的基础中加下划线表示</p>
 <blockquote>
 <h2 id="类与类之间的关系"><a href="#类与类之间的关系" class="headerlink" title="类与类之间的关系"></a>类与类之间的关系</h2></blockquote>
 <p>类与类之间关系大致可分为：</p>
@@ -35,19 +36,20 @@
 </li>
 <li><p>关联<br>代码表现为：类A中以成员变量的形式存在类B的对象，get/set赋值，我们说类A与类B是关联的状态，<span style="color:red;">关联关系强调的是平等关系</span>，在UML类图中用实线箭头表示<br><img src="/images/UML-ClassImg/guanlian.png" alt="关联示意图.png"></p>
 </li>
-<li><p>聚合<br>聚合的代码表现形式与关联一致，构造函数赋值，不好区分，区别在于包含关系的强弱，<span style="color:red;">聚合关系强调的是一方包含另一方，另一方可以单独出去，如汽车和轮胎</span>，在UML类图中用空心菱形箭头表示<br><img src="/images/UML-ClassImg/juhe.png" alt="聚合示意图.png"></p>
+<li><p>聚合<br>聚合的代码表现形式与关联一致，构造函数赋值，不好区分，区别在于包含关系的强弱，<span style="color:red;">聚合关系强调的是一方包含另一方，另一方可以单独出去，整体和个体间是可分离的，如燕群和单只燕子</span>，在UML类图中用空心菱形箭头表示<br><img src="/images/UML-ClassImg/juhe.png" alt="聚合示意图.png"></p>
 </li>
-<li><p>组合<br>组合的代码表现形式与关联和聚合一致，<span style="color:red;">组合关系强调的是一方和另一方是捆绑的无法单独出去，如人和大脑</span>，在UML类图中用实心菱形箭头表示<br><img src="/images/UML-ClassImg/zuhe.png" alt="组合示意图.png"></p>
+<li><p>组合<br>组合的代码表现形式与关联和聚合基本一致，<span style="color:red;">组合关系强调的是整体与个体不可分离，如人和大脑，人死了，大脑的生命周期也结束了</span>，组合也成强聚合，在UML类图中用实心菱形箭头表示<br><img src="/images/UML-ClassImg/zuhe.png" alt="组合示意图.png"></p>
 </li>
 <li><p>继承</p>
 </li>
 </ol>
 <ul>
-<li><p>泛化<br>代码中以 <code>extends</code> 关键字体现，用实线三家箭头表示<br><img src="/images/UML-ClassImg/fanhua.png" alt="泛化示意图.png"></p>
+<li><p>泛化<br>代码中以 <code>extends</code> 关键字体现，用实线三角箭头表示<br><img src="/images/UML-ClassImg/fanhua.png" alt="泛化示意图.png"></p>
 </li>
-<li><p>实现<br>代码中以 <code>inplements</code> 关键字体现，用虚线三角箭头表示<br><img src="/images/UML-ClassImg/shixian.png" alt="实现示意图.png"></p>
+<li><p>实现<br>代码中以 <code>implements</code> 关键字体现，用虚线三角箭头表示<br><img src="/images/UML-ClassImg/shixian.png" alt="实现示意图.png"></p>
 </li>
 </ul>
+<p>（完）</p>
 ]]></content>
       
         
