@@ -14,7 +14,7 @@ tags: RegExp
 匹配结果： [Rat, ox, tiger, rabbit, dragon, snake, horse, sheep, monkey, chicken, <span style="color: red;">dog</span>, pig]
 
 <span style="color: red;">PS:上面我们使用正则` dog ` 匹配了字符示例字符串中的 dog，这是最简单的正则了，其实生活中我们也用到过类似场景，还记得Windows系统中的文件搜索吗</span>
-![Windows系统中的文件搜索例图](images/regexp-use-note/Windows-find.png)
+![Windows系统中的文件搜索例图](/images/regexp-use-note/Windows-find.png)
 <center>（在当前磁盘中搜索包含 Git 的文件[夹]）</center>
 
 是不是有那么点感觉了，没有感觉也没有关系，相信深入了解，你会对正则有感觉的！看过例子后，让我们来了解下正则↓
