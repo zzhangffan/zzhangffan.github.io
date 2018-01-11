@@ -1,5 +1,5 @@
 ---
-title: 
+title: About
 date: 2017-12-29 16:48:16
 ---
 <img src="/images/cool.jpg" alt="a cool img" id="coolImg">
