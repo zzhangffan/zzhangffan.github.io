@@ -42,7 +42,7 @@ tags: Hexo
 &emsp;&emsp;_1.第一次需要验证邮箱_
 &emsp;&emsp;_2.仓库名称固定格式为： 你的GitHub用户名.github.io_
 ### 创建成功后，现在可以用你的仓库名称访问你的GitHub Pages了
-![GitHub Pages.png](/images/Use_Hexo-GitHubPages_bulid_personal_blog/call_GitHub-Pages.png)
+![GitHub Pages.png](/images/hexogithubbuildpersonalpage/call_GitHub-Pages.png)
 
 > ## 安装Hexo
 
@@ -53,14 +53,14 @@ tags: Hexo
 ```
 	$ hexo -v
 ```
-![see_Hexo_version.png](/images/Use_Hexo-GitHubPages_bulid_personal_blog/see_Hexo_version.png)
+![see_Hexo_version.png](/images/hexogithubbuildpersonalpage/see_Hexo_version.png)
 ### 创建一个目录用于存放Hexo相关文件，如： ` $ mkdir Hexo ` 
 ### 使用命令 ` hexo init [目录名] ` 或进入目录执行命令 ` hexo init `
-![command_hexo-init.png](/images/Use_Hexo-GitHubPages_bulid_personal_blog/command_hexo-init.png)
+![command_hexo-init.png](/images/hexogithubbuildpersonalpage/command_hexo-init.png)
 ### Hexo会自动在这个目录下建立需要的文件夹和文件，[目录介绍](https://hexo.io/zh-cn/docs/setup.html)
-![hexo-inited_dirStructure.png](/images/Use_Hexo-GitHubPages_bulid_personal_blog/hexo-inited_dirStructure.png)
+![hexo-inited_dirStructure.png](/images/hexogithubbuildpersonalpage/hexo-inited_dirStructure.png)
 ### 进入目录使用命令 ` npm install ` 安装依赖
-![command_npm-install.png](/images/Use_Hexo-GitHubPages_bulid_personal_blog/command_npm-install.png)
+![command_npm-install.png](/images/hexogithubbuildpersonalpage/command_npm-install.png)
 
 > ## 本地预览
 
@@ -74,7 +74,7 @@ tags: Hexo
 ```
 ### 命令可以组合使用，如 ` $ hexo s -g ` [更多命令查看Hexo文档](https://hexo.io/zh-cn/docs/index.html)
 ### 现在你可以通过 ` http://localhost:4000/ ` 进行访问了
-![Hexo_index.png](/images/Use_Hexo-GitHubPages_bulid_personal_blog/Hexo_index.png)
+![Hexo_index.png](/images/hexogithubbuildpersonalpage/Hexo_index.png)
 
 > ## 部署至GitHub
 
@@ -90,7 +90,7 @@ tags: Hexo
 ```
 	$ hexo deploy 简写： hexo d
 ```
-![command_hexo-d.png](/images/Use_Hexo-GitHubPages_bulid_personal_blog/command_hexo-d.png)
+![command_hexo-d.png](/images/hexogithubbuildpersonalpage/command_hexo-d.png)
 > ### 部署提示找不到：git
 >> 3.0 后 type需改为 git ，deploy部分被单独出来了，需要单独安装
 
@@ -99,7 +99,7 @@ tags: Hexo
 	$ npm install hexo-deployer-git --save
 ```
 ## 再 ` hexo d ` ，部署成功后快用你的GitHub Pages仓库名称访问你的博客吧~
-![GitHub-Pages_index.png](/images/Use_Hexo-GitHubPages_bulid_personal_blog/GitHub-Pages_index.png)
+![GitHub-Pages_index.png](/images/hexogithubbuildpersonalpage/GitHub-Pages_index.png)
 
 （完）
 =====

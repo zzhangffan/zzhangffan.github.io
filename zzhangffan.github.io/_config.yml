@@ -4,7 +4,7 @@
 
 # Site
 title: 张帆
-subtitle:
+subtitle: 做一件有价值的事，一直做，然后等待时间的回报。
 description: 张帆 zhangfan zzhangffan
 author: fanzhang
 language: zh_CN
@@ -14,7 +14,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: zzhangffan.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year:month:day-:title/
 permalink_defaults:
 
 # Directory
