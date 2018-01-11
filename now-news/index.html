@@ -33,17 +33,14 @@
 <link rel="canonical" href="zzhangffan.com/now-news/"/>
 
 
-<meta name="description" content="var axios = require(&apos;axios&apos;);     const KEYWORD = &apos;费德勒&apos;;     const KEYWORD_REG = new RegExp(KEYWORD, &apos;i&apos;);      let newsArry = [];     function spider() {           return axios.get(&apos;http://spor">
 <meta property="og:type" content="website">
 <meta property="og:title" content="时下热点">
 <meta property="og:url" content="zzhangffan.com/now-news/index.html">
 <meta property="og:site_name" content="张帆">
-<meta property="og:description" content="var axios = require(&apos;axios&apos;);     const KEYWORD = &apos;费德勒&apos;;     const KEYWORD_REG = new RegExp(KEYWORD, &apos;i&apos;);      let newsArry = [];     function spider() {           return axios.get(&apos;http://spor">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2018-01-11T08:03:05.670Z">
+<meta property="og:updated_time" content="2018-01-11T08:21:07.606Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="时下热点">
-<meta name="twitter:description" content="var axios = require(&apos;axios&apos;);     const KEYWORD = &apos;费德勒&apos;;     const KEYWORD_REG = new RegExp(KEYWORD, &apos;i&apos;);      let newsArry = [];     function spider() {           return axios.get(&apos;http://spor">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1.1" />
@@ -122,40 +119,6 @@
       <source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">
       <p>你的浏览器不支持 HTML5 Video。</p>
     </video> -->
-<script type="text/javascript">
-    var axios = require('axios');
-    const KEYWORD = '费德勒';
-    const KEYWORD_REG = new RegExp(KEYWORD, 'i');
-
-    let newsArry = [];
-    function spider() {
-          return axios.get('http://sports.sina.com.cn/tennis/').then(response => {
-        if (response.status === 200) {
-
-              let $ = cheerio.load(response.data, {
-                decodeEntities: false
-              });
-          let newsList = $('a[href]');
-          newsArry = [];
-          for (let i = 0; i < newsList.length; ++i) {
-            let obj = $(newsList[i]);
-            let text = $(newsList[i]).text();
-            //收集数据
-            if (KEYWORD_REG.test(text)) {
-                  newsArry.push({
-                    'title': text.trim(),
-                    'href': obj.attr('href')
-              })
-        }
-        alert(JSON.stringify(newsArry));
-      }
-    }
-  }).catch(e => {
-    console.log('爬虫失败了');
-    console.log(error);
-  });
-
-</script>
             </div>
         </article>
     </div>
@@ -171,7 +134,7 @@
     2018
     <span class="footer-author">fanzhang.</span>
     <span class="power-by">
-        由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/henryhuang/hexo-theme-polarbearsimple">Polar Bear Simple</a> 强力驱动
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/henryhuang/hexo-theme-polarbearsimple">Polar Bear Simple</a>
     </span>
 </span>
 
