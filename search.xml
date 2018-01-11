@@ -3,6 +3,69 @@
   
     
     <entry>
+      <title><![CDATA[Linux命令系列-ls]]></title>
+      <url>/20180111-linuxcommand-ls/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>此为Linux命令使用系列记录，博主使用到了哪些命令就写了哪些，命令的参数也记录不全，用到的就写了，需要完整学习，请参考<a href="http://man.linuxde.net/" target="_blank" rel="noopener">Linux命令大全(手册)_Linux常用命令行实例详解_Linux命令学习手册</a></p>
+</blockquote>
+<h2 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a><strong>ls命令</strong></h2><p>ls命令用来显示目标列表</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a><strong>语法</strong></h2><blockquote>
+<p>ls  (选项)  (参数)</p>
+</blockquote>
+<h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a><strong>参数</strong></h2><p>目录：指定要显示列表的目录，也可以是具体的文件。</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a><strong>示例</strong></h2><ul>
+<li><strong><em>列出当前目录下非隐藏文件及目录</em></strong><blockquote>
+<p>[root@hostname ~]#  ls<br>&emsp;</p>
+</blockquote>
+</li>
+</ul>
+<p>&emsp;&emsp;<span style="color: red;">PS:我的root用户的home目录下没有非隐藏文件及目录，看看你的执行结果吧</span></p>
+<ul>
+<li><strong><em>列出当前目录下所有文件及目录</em></strong><blockquote>
+<p>[root@hostname ~]#  ls  -a<br>.   .bash_history  .bash_profile  .cache  .npm  .pydistutils.cfg  .tcshrc<br>..  .bash_logout   .bashrc        .cshrc  .pip  .ssh</p>
+</blockquote>
+</li>
+</ul>
+<p>&emsp;&emsp;<span style="color: red;">PS:Linux中以.开头的为隐藏文件</span></p>
+<ul>
+<li><strong><em>以长格式列出当前目录下所有文件及目录</em></strong><blockquote>
+<p>[root@hostname ~]# ls -a -l<br>total 60<br>dr-xr-x—.   6 root root  4096 Jan  1 09:57 .<br>dr-xr-xr-x.  18 root root  4096 Dec 31 14:45 ..<br>-rw——-    1 root root  1403 Jan 11 09:39 .bash_history<br>-rw-r–r–.   1 root root    18 Dec 29  2013 .bash_logout<br>-rw-r–r–.   1 root root   176 Dec 29  2013 .bash_profile<br>-rw-r–r–.   1 root root   176 Dec 29  2013 .bashrc<br>drwx——    3 root root  4096 Oct 15 23:24 .cache<br>-rw-r–r–.   1 root root   100 Dec 29  2013 .cshrc<br>drwxr-xr-x  237 base base 12288 Jan  1 09:58 .npm<br>drwxr-xr-x    2 root root  4096 Oct 15 23:24 .pip<br>-rw-r–r–    1 root root    64 Oct 15 23:24 .pydistutils.cfg<br>drwx——    2 root root  4096 Dec 31 14:45 .ssh<br>-rw-r–r–.   1 root root   129 Dec 29  2013 .tcshrc</p>
+</blockquote>
+</li>
+</ul>
+<p>&emsp;&emsp;<span style="color: red;">PS：<a href="/post_sources/linuxcommands/ls-result.xml">命令结果解析</a></span></p>
+<ul>
+<li><p><strong><em>按最近一次修改的时间排序显示</em></strong></p>
+<blockquote>
+<p>[root@hostname ~]#  ls  -t<br>.bash_history  .     ..    .pydistutils.cfg  .bash_logout   .bashrc  .tcshrc<br>.npm           .ssh  .pip  .cache            .bash_profile  .cshrc</p>
+</blockquote>
+</li>
+<li><p><strong><em>指定目录显示</em></strong></p>
+<blockquote>
+<p>[root@hostname tmp]#  ls  test<br>son  test.txt</p>
+</blockquote>
+</li>
+<li><p><strong><em>遍历目录显示</em></strong></p>
+<blockquote>
+<p>[root@hostname tmp]#  ls  test -R<br>test:<br>son  test.txt<br>&emsp;<br>test/son:<br>sontest.txt</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="选项-（网上复制的，个人觉得死记没用，放在最后）"><a href="#选项-（网上复制的，个人觉得死记没用，放在最后）" class="headerlink" title="选项 （网上复制的，个人觉得死记没用，放在最后）"></a><strong>选项</strong> <span style="color: red;">（网上复制的，个人觉得死记没用，放在最后）</span></h2><blockquote>
+<p>-a：显示所有档案及目录（ls内定将档案名或目录名称为“.”的视为影藏，不会列出）；<br>-A：显示除影藏文件“.”和“..”以外的所有文件列表；<br>-C：多列显示输出结果。这是默认选项；<br>-l：与“-C”选项功能相反，所有输出信息用单列格式输出，不输出为多列；<br>-F：在每个输出项后追加文件的类型标识符，具体含义：“<em>”表示具有可执行权限的普通文件，“/”表示目录，“@”表示符号链接，“|”表示命令管道FIFO，“=”表示sockets套接字。当文件为普通文件时，不输出任何标识符；<br>-b：将文件中的不可输出的字符以反斜线“”加字符编码的方式输出；<br>-c：与“-lt”选项连用时，按照文件状态时间排序输出目录内容，排序的依据是文件的索引节点中的ctime字段。与“-l”选项连用时，则排序的一句是文件的状态改变时间；<br>-d：仅显示目录名，而不显示目录下的内容列表。显示符号链接文件本身，而不显示其所指向的目录列表；<br>-f：此参数的效果和同时指定“aU”参数相同，并关闭“lst”参数的效果；<br>-i：显示文件索引节点号（inode）。一个索引节点代表一个文件；<br>–file-type：与“-F”选项的功能相同，但是不显示“</em>”；<br>-k：以KB（千字节）为单位显示文件大小；<br>-l：以长格式显示目录下的内容列表。输出的信息从左到右依次包括文件名，文件类型、权限模式、硬连接数、所有者、组、文件大小和文件的最后修改时间等；<br>-m：用“,”号区隔每个文件和目录的名称；<br>-n：以用户识别码和群组识别码替代其名称；<br>-r：以文件名反序排列并输出目录内容列表；<br>-s：显示文件和目录的大小，以区块为单位；<br>-t：用文件和目录的更改时间排序；<br>-L：如果遇到性质为符号链接的文件或目录，直接列出该链接所指向的原始文件或目录；<br>-R：递归处理，将指定目录下的所有文件及子目录一并处理；<br>–full-time：列出完整的日期与时间；<br>–color[=WHEN]：使用不同的颜色高亮显示不同类型的。</p>
+</blockquote>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[正则表达式使用笔记]]></title>
       <url>/20180109-regexpusenote/</url>
       <content type="html"><![CDATA[<blockquote>

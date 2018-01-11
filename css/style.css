@@ -593,11 +593,11 @@ h6 {
         border: 0; }
     .post .post-content blockquote {
       margin: 1em 0;
-      padding-left: 10px;
+      padding: 10px 12px;
       position: relative;
       color: rgba(0, 0, 0, 0.6);
-      background-color: #fff;
-      border-left: 2px solid #aaa; }
+      background-color: #E6E9ED;
+      border-left: 4px solid #7ad03a; }
       .post .post-content blockquote p {
         margin: 0; }
     .post .post-content img {
