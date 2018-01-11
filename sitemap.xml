@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>zzhangffan.com/2018/01/09/regexp-use-note/</loc>
+    <loc>zzhangffan.com/20180109-regexpusenote/</loc>
     
-    <lastmod>2018-01-09T05:31:40.022Z</lastmod>
+    <lastmod>2018-01-11T00:52:04.389Z</lastmod>
     
   </url>
   
   <url>
-    <loc>zzhangffan.com/2018/01/02/UML-ClassImg/</loc>
+    <loc>zzhangffan.com/20180102-umlclassimg/</loc>
     
-    <lastmod>2018-01-02T14:13:29.076Z</lastmod>
+    <lastmod>2018-01-11T00:48:08.104Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>zzhangffan.com/20171231-hexogithubbulidpersonalblog/</loc>
+    
+    <lastmod>2018-01-11T00:47:34.318Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>zzhangffan.com/about/index.html</loc>
     
     <lastmod>2018-01-02T02:16:08.853Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>zzhangffan.com/2017/12/31/Use_Hexo-GitHubPages_bulid_personal_blog/</loc>
-    
-    <lastmod>2018-01-02T01:53:51.301Z</lastmod>
     
   </url>
   

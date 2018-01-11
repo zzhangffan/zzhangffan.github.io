@@ -32,29 +32,29 @@
 
 
 
-<link rel="canonical" href="zzhangffan.com/2018/01/02/UML-ClassImg/"/>
+<link rel="canonical" href="zzhangffan.com/20180102-umlclassimg/"/>
 
 
 <meta name="description" content="最近在看设计模式的过程中发现用UML类图的地方特别多，学习了之后现在把它记录下来 先上一个最基本的类图示例  类的表示形式 在UML类图中，类由一个矩形图案表示，从上到下分别为类名、属性以及方法。  类名普通类用  正体字  书写 | 接口 a.名称上方加 &amp;lt;&amp;lt; interface &amp;gt;&amp;gt; 表示 b.名称前加 O— | 抽象类用  斜体字  书写  属性属性的表示方法如下：&amp;">
 <meta name="keywords" content="UML">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UML类图">
-<meta property="og:url" content="zzhangffan.com/2018/01/02/UML-ClassImg/index.html">
+<meta property="og:url" content="zzhangffan.com/20180102-umlclassimg/index.html">
 <meta property="og:site_name" content="张帆">
 <meta property="og:description" content="最近在看设计模式的过程中发现用UML类图的地方特别多，学习了之后现在把它记录下来 先上一个最基本的类图示例  类的表示形式 在UML类图中，类由一个矩形图案表示，从上到下分别为类名、属性以及方法。  类名普通类用  正体字  书写 | 接口 a.名称上方加 &amp;lt;&amp;lt; interface &amp;gt;&amp;gt; 表示 b.名称前加 O— | 抽象类用  斜体字  书写  属性属性的表示方法如下：&amp;">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="/images/UML-ClassImg/class.png">
-<meta property="og:image" content="/images/UML-ClassImg/yilai.png">
-<meta property="og:image" content="/images/UML-ClassImg/guanlian.png">
-<meta property="og:image" content="/images/UML-ClassImg/juhe.png">
-<meta property="og:image" content="/images/UML-ClassImg/zuhe.png">
-<meta property="og:image" content="/images/UML-ClassImg/fanhua.png">
-<meta property="og:image" content="/images/UML-ClassImg/shixian.png">
-<meta property="og:updated_time" content="2018-01-02T14:13:29.076Z">
+<meta property="og:image" content="/images/umlclassimg/class.png">
+<meta property="og:image" content="/images/umlclassimg/yilai.png">
+<meta property="og:image" content="/images/umlclassimg/guanlian.png">
+<meta property="og:image" content="/images/umlclassimg/juhe.png">
+<meta property="og:image" content="/images/umlclassimg/zuhe.png">
+<meta property="og:image" content="/images/umlclassimg/fanhua.png">
+<meta property="og:image" content="/images/umlclassimg/shixian.png">
+<meta property="og:updated_time" content="2018-01-11T00:48:08.104Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UML类图">
 <meta name="twitter:description" content="最近在看设计模式的过程中发现用UML类图的地方特别多，学习了之后现在把它记录下来 先上一个最基本的类图示例  类的表示形式 在UML类图中，类由一个矩形图案表示，从上到下分别为类名、属性以及方法。  类名普通类用  正体字  书写 | 接口 a.名称上方加 &amp;lt;&amp;lt; interface &amp;gt;&amp;gt; 表示 b.名称前加 O— | 抽象类用  斜体字  书写  属性属性的表示方法如下：&amp;">
-<meta name="twitter:image" content="/images/UML-ClassImg/class.png">
+<meta name="twitter:image" content="/images/umlclassimg/class.png">
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1.1" />
@@ -139,7 +139,7 @@
     
             <div class="post-content">
             <p>最近在看设计模式的过程中发现用UML类图的地方特别多，学习了之后现在把它记录下来</p>
-<h2 id="先上一个最基本的类图示例"><a href="#先上一个最基本的类图示例" class="headerlink" title="先上一个最基本的类图示例"></a>先上一个最基本的类图示例</h2><p><img src="/images/UML-ClassImg/class.png" alt="class"></p>
+<h2 id="先上一个最基本的类图示例"><a href="#先上一个最基本的类图示例" class="headerlink" title="先上一个最基本的类图示例"></a>先上一个最基本的类图示例</h2><p><img src="/images/umlclassimg/class.png" alt="class"></p>
 <blockquote>
 <h2 id="类的表示形式"><a href="#类的表示形式" class="headerlink" title="类的表示形式"></a>类的表示形式</h2></blockquote>
 <p>在UML类图中，类由一个矩形图案表示，从上到下分别为类名、属性以及方法。</p>
@@ -165,21 +165,21 @@
 <li>继承</li>
 </ul>
 <ol>
-<li><p>依赖<br>代码表现为：类A的方法中以局部变量、方法参数的形式存在类B的对象或调用类B的静态方法，我们说类A依赖于类B，在UML类图中用虚线箭头表示<br><img src="/images/UML-ClassImg/yilai.png" alt="依赖示意图.png"></p>
+<li><p>依赖<br>代码表现为：类A的方法中以局部变量、方法参数的形式存在类B的对象或调用类B的静态方法，我们说类A依赖于类B，在UML类图中用虚线箭头表示<br><img src="/images/umlclassimg/yilai.png" alt="依赖示意图.png"></p>
 </li>
-<li><p>关联<br>代码表现为：类A中以成员变量的形式存在类B的对象，get/set赋值，我们说类A与类B是关联的状态，<span style="color:red;">关联关系强调的是平等关系</span>，在UML类图中用实线箭头表示<br><img src="/images/UML-ClassImg/guanlian.png" alt="关联示意图.png"></p>
+<li><p>关联<br>代码表现为：类A中以成员变量的形式存在类B的对象，get/set赋值，我们说类A与类B是关联的状态，<span style="color:red;">关联关系强调的是平等关系</span>，在UML类图中用实线箭头表示<br><img src="/images/umlclassimg/guanlian.png" alt="关联示意图.png"></p>
 </li>
-<li><p>聚合<br>聚合的代码表现形式与关联一致，构造函数赋值，不好区分，区别在于包含关系的强弱，<span style="color:red;">聚合关系强调的是一方包含另一方，另一方可以单独出去，整体和个体间是可分离的，如燕群和单只燕子</span>，在UML类图中用空心菱形箭头表示<br><img src="/images/UML-ClassImg/juhe.png" alt="聚合示意图.png"></p>
+<li><p>聚合<br>聚合的代码表现形式与关联一致，构造函数赋值，不好区分，区别在于包含关系的强弱，<span style="color:red;">聚合关系强调的是一方包含另一方，另一方可以单独出去，整体和个体间是可分离的，如燕群和单只燕子</span>，在UML类图中用空心菱形箭头表示<br><img src="/images/umlclassimg/juhe.png" alt="聚合示意图.png"></p>
 </li>
-<li><p>组合<br>组合的代码表现形式与关联和聚合基本一致，<span style="color:red;">组合关系强调的是整体与个体不可分离，如人和大脑，人死了，大脑的生命周期也结束了</span>，组合也成强聚合，在UML类图中用实心菱形箭头表示<br><img src="/images/UML-ClassImg/zuhe.png" alt="组合示意图.png"></p>
+<li><p>组合<br>组合的代码表现形式与关联和聚合基本一致，<span style="color:red;">组合关系强调的是整体与个体不可分离，如人和大脑，人死了，大脑的生命周期也结束了</span>，组合也成强聚合，在UML类图中用实心菱形箭头表示<br><img src="/images/umlclassimg/zuhe.png" alt="组合示意图.png"></p>
 </li>
 <li><p>继承</p>
 </li>
 </ol>
 <ul>
-<li><p>泛化<br>代码中以 <code>extends</code> 关键字体现，用实线三角箭头表示<br><img src="/images/UML-ClassImg/fanhua.png" alt="泛化示意图.png"></p>
+<li><p>泛化<br>代码中以 <code>extends</code> 关键字体现，用实线三角箭头表示<br><img src="/images/umlclassimg/fanhua.png" alt="泛化示意图.png"></p>
 </li>
-<li><p>实现<br>代码中以 <code>implements</code> 关键字体现，用虚线三角箭头表示<br><img src="/images/UML-ClassImg/shixian.png" alt="实现示意图.png"></p>
+<li><p>实现<br>代码中以 <code>implements</code> 关键字体现，用虚线三角箭头表示<br><img src="/images/umlclassimg/shixian.png" alt="实现示意图.png"></p>
 </li>
 </ul>
 <p>（完）</p>
@@ -199,14 +199,14 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2018/01/09/regexp-use-note/">
+      <a class="prev" href="/20180109-regexpusenote/">
         <i class="iconfont icon-left"></i>
         <span class="prev-text nav-default">正则表达式使用笔记</span>
         <span class="prev-text nav-mobile">Prev</span>
       </a>
     
     
-      <a class="next" href="/2017/12/31/Use_Hexo-GitHubPages_bulid_personal_blog/">
+      <a class="next" href="/20171231-hexogithubbulidpersonalblog/">
         <span class="next-text nav-default">用 Hexo + GitHub Pages 搭建个人博客</span>
         <span class="prev-text nav-mobile">Next</span>
         <i class="iconfont icon-right"></i>
@@ -261,7 +261,7 @@
 
 <script type="text/javascript">
   var disqus_shortname = 'ffanzzhang';
-  var disqus_identifier = '2018/01/02/UML-ClassImg/';
+  var disqus_identifier = '20180102-umlclassimg/';
 
   var disqus_title = "UML类图";
 
