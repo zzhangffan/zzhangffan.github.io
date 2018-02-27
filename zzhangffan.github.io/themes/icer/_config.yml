@@ -1,0 +1,48 @@
+# Meta
+description: zhangfan.
+keywords: zzhangffan,zhangfan
+
+# Navigation
+navigation:
+- name: home
+  slug: home
+  url: /
+- name: Java
+  slug: Java
+  url: /tags/Java/
+- name: Linux
+  slug: Linux
+  url: /tags/Linux/
+- name: live
+  slug: live
+  url: /tags/live/
+- name: archives
+  slug: archives
+  url: /archives
+- name: About
+  slug: About
+  url: /about/
+
+# Friendly link
+links:
+  - name: 
+    url: 
+
+# Social account
+social:
+- slug: github
+  url: https://github.com/zzhangffan
+- slug: email
+  url: 
+- slug: rss
+	url: /atom.xml
+
+# Google analytics
+google_analytics: UA-93986029-1
+
+# Local search
+local_search:
+  enable: true
+
+# Favicon
+favicon: /image/favicon.ico

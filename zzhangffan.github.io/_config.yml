@@ -14,7 +14,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: zzhangffan.com
 root: /
-permalink: :year:month:day-:title/
+permalink: :year:month:day/:title/
 permalink_defaults:
 
 # Directory
@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: polarbearsimple #landscape
+theme: icer
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -84,6 +84,14 @@ deploy:
 
 # Disqus
 disqus_shortname: ffanzzhang
+
+# search
+## npm install hexo-generator-search[db] --save
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 
 # plugins
 plugins:
