@@ -2,7 +2,7 @@
 title: About
 date: 2017-12-29 16:48:16
 ---
-<img src="/images/cool.jpg" alt="a cool img" id="coolImg">
+<img src="/images/cool.jpg" alt="aImg" id="coolImg">
 <style type="text/css">
 	#coolImg {
 		position: absolute;
@@ -12,16 +12,13 @@ date: 2017-12-29 16:48:16
 </style>
 
 ## 关于我
-&ensp;&ensp;男，99年生人，16年2月起培训，工作近年吧的Java从业者，这是一个非全技术的博客！
+&ensp;&ensp;男，99年生人，现居湖南长沙！
 
-## 社交账号
+## 联系我
 * GitHub:	[zzhangffan](https://github.com/zzhangffan)
-* QQ:	2300650579
-* WeChat:	FANZ0503z
-* Email:zzhangffan1@163.com | fan.zhang@powersi.com.cn(单位邮箱)
-* 微博:	[用户张Z](https://weibo.com/6208723644)
+* Email:zzhangffan1@163.com
 
-## 关于站点
+## 站点信息
 ___[#RSS](/atom.xml)&ensp;&ensp;[#Sitemap](/sitemap.xml)___
 
 <script type="text/javascript">
@@ -34,9 +31,9 @@ ___[#RSS](/atom.xml)&ensp;&ensp;[#Sitemap](/sitemap.xml)___
 		var parentNode = img.parentNode;
 		parentNode.appendChild(Ele);
 		parentNode.removeChild(img);
-		//alert("移动端浏览");
+		alert("移动端浏览");
 	} else {
-		//alert("PC端浏览");
+		alert("PC端浏览");
 	}
 
 	var docEle = document.documentElement;
