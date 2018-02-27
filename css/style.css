@@ -593,7 +593,7 @@ h6 {
         border: 0; }
     .post .post-content blockquote {
       margin: 1em 0;
-      padding: 10px 12px;
+      padding: 1px 12px;
       position: relative;
       color: rgba(0, 0, 0, 0.6);
       background-color: #E6E9ED;
@@ -682,7 +682,9 @@ h6 {
           margin: 0;
           padding: 30px 7px 10px; }
       .post .post-content .highlight .line {
-        height: 20px; }
+        font-weight: 400;
+        font-family: PingFang SC;
+        font-size: 18px; }
       .post .post-content .highlight table, .post .post-content .highlight tr, .post .post-content .highlight td {
         margin: 0;
         padding: 0;
@@ -899,7 +901,7 @@ h6 {
       float: left;
       overflow: hidden;
       color: #aaa;
-      font-size: 14px;
+      font-size: 15px;
       line-height: 25px;
       display: block; }
     .archive .archive-post .archive-post-title {
@@ -1062,3 +1064,6 @@ h6 {
 @media only screen and (max-width: 750px) {
   .back-to-top {
     display: none !important; } }
+
+.note {
+  color: red; }
