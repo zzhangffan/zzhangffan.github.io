@@ -61,8 +61,8 @@ public class HelloProxy{
 ```
 public interface TargetInterface{
 
-	public void sayHello();
-	public void sayGoodbye();
+	void sayHello();
+	void sayGoodbye();
 }
 ```
 实现目标接口的委托类：
