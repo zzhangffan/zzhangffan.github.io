@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>哈希表 | 张帆</title>
+  <meta name="description" content="zhangfan." />
+  <meta name="keywords" content="zzhangffan,zhangfan" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="了解哈希表前先了解两个数据结构： 数组、链表 数组一组同类型元素的集合，在内存中表现为一片连续的空间，其中每个数据单元占用相等大小的内存空间。因为空间是连续的，所以可以通过地址的偏移（数组下标）来快速访问，但当要新增或删除一个元素时，其后所有元素要进行相应的移动。  图片来自菜鸟教程   链表是一种物理上非连续、非顺序的数据结构。由一系列节点组成，每个节点除了保存自己的数据还保存了一个指向后继节点">
+<meta name="keywords" content="Java,hash-table">
+<meta property="og:type" content="article">
+<meta property="og:title" content="哈希表">
+<meta property="og:url" content="zzhangffan.com/20180301/hash-table/index.html">
+<meta property="og:site_name" content="张帆">
+<meta property="og:description" content="了解哈希表前先了解两个数据结构： 数组、链表 数组一组同类型元素的集合，在内存中表现为一片连续的空间，其中每个数据单元占用相等大小的内存空间。因为空间是连续的，所以可以通过地址的偏移（数组下标）来快速访问，但当要新增或删除一个元素时，其后所有元素要进行相应的移动。  图片来自菜鸟教程   链表是一种物理上非连续、非顺序的数据结构。由一系列节点组成，每个节点除了保存自己的数据还保存了一个指向后继节点">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="/images/hash-table/array.jpg">
+<meta property="og:image" content="/images/hash-table/linked-list.jpg">
+<meta property="og:image" content="/images/hash-table/eg.jpg">
+<meta property="og:image" content="/images/hash-table/kfdz-xxtc1.jpg">
+<meta property="og:image" content="/images/hash-table/kfdz-xxtc2.jpg">
+<meta property="og:image" content="/images/hash-table/kfdz-ectc.jpg">
+<meta property="og:image" content="/images/hash-table/llf.jpg">
+<meta property="og:updated_time" content="2018-03-03T04:14:23.916Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="哈希表">
+<meta name="twitter:description" content="了解哈希表前先了解两个数据结构： 数组、链表 数组一组同类型元素的集合，在内存中表现为一片连续的空间，其中每个数据单元占用相等大小的内存空间。因为空间是连续的，所以可以通过地址的偏移（数组下标）来快速访问，但当要新增或删除一个元素时，其后所有元素要进行相应的移动。  图片来自菜鸟教程   链表是一种物理上非连续、非顺序的数据结构。由一系列节点组成，每个节点除了保存自己的数据还保存了一个指向后继节点">
+<meta name="twitter:image" content="/images/hash-table/array.jpg">
+  
+  
+    <link rel="icon" href="/image/favicon.ico">
+  
+  
+  <link rel='stylesheet' href='//cdnjs.xyz/libs/nprogress/0.2.0/nprogress.css'/>
+  <link rel="stylesheet" href="//cdnjs.xyz/libs/highlight/9.12.0/styles/github-gist.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_405585_2mmfrz9pgd7h9f6r.css">
+  <script src='//cdnjs.xyz/libs/nprogress/0.2.0/nprogress.js'></script>
+  <!-- <script>try{Typekit.load({ async: false });}catch(e){}</script> -->
+  <link rel="stylesheet" href="/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-93986029-1', 'auto');
+  ga('send', 'pageview');
+  
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  
+  <script>NProgress.start();</script>
+  
+  <div id="site-wrapper">
+    
+    <header class="header">
+  <div class="header-wrapper">
+    <a href="/">
+      <img src="/image/logo.jpg" class="logo"/>
+      <!-- <span class="site-desc">
+        
+      </span> -->
+    </a>
+    <div class="social-wrapper">
+      
+        
+          <a href="https://github.com/zzhangffan" class="social github" target="_blank" rel="external">
+            <span class="iconfont icon-github"></span>
+          </a>
+          
+          <a href="/atom.xml" class="social rss" target="_blank" rel="external">
+            <span class="iconfont icon-rss"></span>
+          </a>
+          
+      
+      
+      <a href="#" class="social search-do" target="_blank" rel="external">
+        <span class="iconfont icon-search"></span>
+      </a>
+            
+      <!-- <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="zzhangffan.com"></form> -->
+    </div>
+    <div class="search-wrap">
+      <div class="search-content animated fade-in">
+        <p class="search-input">
+          <span class="iconfont icon-search"></span>
+          <input tabindex="1">
+        </p>
+        <ul class="search-result">
+            
+              <div class="tags">
+                   <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li></ul>
+                </div>
+            
+        </ul>
+      </div>
+    </div>
+    <nav class="header-nav">
+      
+        <a href="/" class="archives">
+          home
+        </a>
+        
+        <a href="/tags/Java/" class="archives">
+          Java
+        </a>
+        
+        <a href="/tags/Web/" class="archives">
+          Web
+        </a>
+        
+        <a href="/tags/live/" class="archives">
+          live
+        </a>
+        
+        <a href="/archives" class="archives">
+          archives
+        </a>
+        
+        <a href="/about/" class="archives">
+          About
+        </a>
+        
+    </nav>
+  </div>
+</header>
+    <script>NProgress.set(0.4);</script>
+    
+    <main id="main" role="main">
+      <article id="post-hash-table"
+  class="post article white-box article-type-post animated fade-in-top"
+  itemscope itemprop="blogPost">
+  <section class="post-header article-header">
+    <h2 class="title">
+        <a href="/20180301/hash-table/">
+          哈希表
+        </a>
+      </h2>
+      <div class="subtitle">
+          <time>
+            3月 1, 2018
+          </time>
+          
+            <span class="tags">
+                <span class="iconfont icon-tag"></span>
+                <a class="tag-link" href="/tags/Java/">Java</a> / <a class="tag-link" href="/tags/hash-table/">hash-table</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    <div class="article-entry" itemprop="articleBody">
+      <p>了解哈希表前先了解两个数据结构：</p>
+<h3 id="数组、链表"><a href="#数组、链表" class="headerlink" title="数组、链表"></a>数组、链表</h3><ul>
+<li><p>数组<br>一组同类型元素的集合，在内存中表现为一片连续的空间，其中每个数据单元占用相等大小的内存空间。因为空间是连续的，所以可以通过地址的偏移（数组下标）来快速访问，但当要新增或删除一个元素时，其后所有元素要进行相应的移动。<br><img src="/images/hash-table/array.jpg" alt="array"></p>
+<blockquote>
+<p>图片来自菜鸟教程</p>
+</blockquote>
+</li>
+<li><p>链表<br>是一种物理上非连续、非顺序的数据结构。由一系列节点组成，每个节点除了保存自己的数据还保存了一个指向后继节点的引用。这样每个节点就如同一个链子被串起来了。链表无法快速访问，当要访问一个元素的时候，需从链表的头节点开始遍历，直到找到对应的元素或到达链表尾。当修改或新增一个元素时，只需找到这个元素，并修改其相邻节点的相关引用即可。<br><img src="/images/hash-table/linked-list.jpg" alt="linked-list"></p>
+<blockquote>
+<p>图片来自百度图片</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><p>哈希表也叫散列表，通过关键字映射到表中的一个位置来访问数据。映射关键字的函数叫散列函数，存放数据的数组叫散列表。</p>
+<blockquote>
+<p>散列位置 = 散列函数(关键字)</p>
+</blockquote>
+<h3 id="散列函数常用设计方式"><a href="#散列函数常用设计方式" class="headerlink" title="散列函数常用设计方式"></a>散列函数常用设计方式</h3><ol>
+<li>直接定址法<br>取关键字或关键字的某个线性函数值为散列地址。</li>
+<li>数字分析法<br>分析数据去除重复录较高的部分，利用差别比较大的部分来构建散列地址。</li>
+<li>平方取中法<br>取关键字平方后的中间几位来作为散列地址</li>
+<li>折叠法<br>将关键字分成位数相同的几部分，最后一部分可以不同，然后取这几部分的叠加和（舍去进位）作为散列地址。</li>
+<li>除留余数法<br>取关键字被某个不大于表长的数除运算后的余数作为散列地址。<blockquote>
+<p>散列地址 = 关键字 MOD 不大于表长的数</p>
+</blockquote>
+</li>
+<li>随机算法<br>通过随机函数生成散列地址</li>
+</ol>
+<p>一个好的散列函数的值应该尽可能平均分布。</p>
+<h3 id="散列冲突"><a href="#散列冲突" class="headerlink" title="散列冲突"></a>散列冲突</h3><p>不管设计多好的散列函数，都可能出现不同的关键字被映射到表中的同一个位置，我们称着中情况为散列冲突。</p>
+<p>假设我们的关键字是{47,67,56,16,25,22}，散列算法为<code>h(key) = key mod 6</code> 。当我们计算关键字{47,67,56,16}时都没有问题：<br><img src="/images/hash-table/eg.jpg" alt="eg"></p>
+<p>当散列关键字25时发现 25 mod 6 = 1，可索引1已经被占用了，这就出现了散列冲突。<br>解决冲突的方式：</p>
+<h4 id="开放定址法（线性探测、二次探测、随机探测）"><a href="#开放定址法（线性探测、二次探测、随机探测）" class="headerlink" title="开放定址法（线性探测、二次探测、随机探测）"></a>开放定址法（线性探测、二次探测、随机探测）</h4><p>开放定址法指的是当发生散列冲突时，去探测下一个空的散列位置，只要表中还存在空的散列地址，总能找到。</p>
+<ul>
+<li><p>线性探测<br>在出现散列冲突的位置往后一个位置探测，直到遇到空的位置，存入数据。<br>例子中散列关键字25时索引位置1出现了冲突，我们往后一个位置探测，发现位置2也被占用了，继续往后探测，ok，索引3的位置为空，直接占下来。<br><img src="/images/hash-table/kfdz-xxtc1.jpg" alt="kfdz-xxtc1"></p>
+</li>
+<li><p>二次探测<br>考虑一种情况，假设索引3在散列关键字25之前就被占用，表使用图示如下：<br><img src="/images/hash-table/kfdz-xxtc2.jpg" alt="kfdz-xxtc2"><br>这种情况下，尽管表中还有可使用的位置，可通过线性探测我们将无法为关键字25找到可以散列的位置。<br>这种情况我们可以使用二次探测，它不只是往后探测，它对冲突位置前后都进行探测，如图示：<br><img src="/images/hash-table/kfdz-ectc.jpg" alt="kfdz-ectc"></p>
+</li>
+<li><p>随机探测<br>通过一个伪随机函数（结果是可以确定的）生成散列地址。</p>
+</li>
+</ul>
+<p>开放定址可能出现非同义词的冲突。</p>
+<h4 id="拉链法"><a href="#拉链法" class="headerlink" title="拉链法"></a>拉链法</h4><p>与开放地址寻找下一个空的散列地址不同，拉链法通过在原地进行处理，将所有同义词的记录存在一个单链表中，哈希表中值保存单链表的头指针。如图：<br><img src="/images/hash-table/llf.jpg" alt="llf"></p>
+<h1 id="（完）"><a href="#（完）" class="headerlink" title="（完）"></a>（完）</h1>
+    </div>
+  </section>
+
+  
+  
+</article>
+      <script>NProgress.set(0.6);</script>
+    </main>
+    
+    <footer class="footer">
+  <div class="footer-wrap">
+    <div class="footer-link">
+      
+      <h3>LINKS</h3>
+      <p>
+        
+          <a href="" target="_blank"></a>
+        
+      </p>
+      
+    </div>
+    <div class="footer-tags">
+      
+        <h3>TAGS</h3>        
+        <div class="tags">
+             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li></ul>
+          </div>
+      
+    </div>
+    <div class="footer-info">
+        <div>Theme <span class="codename"><a href="https://github.com/GGICE/hexo-icer" target="_blank">icer</a></span> designed & coded by <a href="https://ice.gs/" target="_blank">GGICE</a></div>
+        <div>Copyright &copy; 2017-2018, <a href="/">张帆</a>  . All rights reserved .</div>
+      </div>
+  </div>
+</footer>
+
+
+    <script>NProgress.set(0.8);</script>
+    
+  </div>
+
+  <script src="//cdnjs.xyz/libs/highlight/9.12.0/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/main.js"></script>
+
+<!-- Commit -->
+
+
+
+  <script>
+    NProgress.done();
+  </script>
+  
+</body>
+</html>
