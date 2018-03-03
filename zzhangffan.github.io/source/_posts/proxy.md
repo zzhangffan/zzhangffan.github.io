@@ -220,8 +220,8 @@ public class ProxyInterceptor implements MethodInterceptor{
 
 	public static void main(String[] args) {
 		ProxyInterceptor proxy = new ProxyInterceptor();
-		TargetInterface target = proxy.getProxy(Hello.class);
-		target.sayHello();
+		Hello hello = proxy.getProxy(Hello.class);
+		hello.sayHello();
 	}
 }
 ```

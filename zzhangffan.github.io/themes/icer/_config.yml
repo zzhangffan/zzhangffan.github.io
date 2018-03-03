@@ -10,9 +10,9 @@ navigation:
 - name: Java
   slug: Java
   url: /tags/Java/
-- name: Linux
-  slug: Linux
-  url: /tags/Linux/
+- name: Web
+  slug: Web
+  url: /tags/Web/
 - name: live
   slug: live
   url: /tags/live/
