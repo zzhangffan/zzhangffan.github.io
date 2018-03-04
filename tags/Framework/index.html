@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Archives: 2018/2 | 张帆</title>
+  <title>Tag: Framework | 张帆</title>
   <meta name="description" content="zhangfan." />
   <meta name="keywords" content="zzhangffan,zhangfan" />
   <meta name="HandheldFriendly" content="True" />
@@ -13,7 +13,7 @@
   <meta name="description" content="张帆 zhangfan zzhangffan">
 <meta property="og:type" content="website">
 <meta property="og:title" content="张帆">
-<meta property="og:url" content="zzhangffan.com/archives/2018/02/index.html">
+<meta property="og:url" content="zzhangffan.com/tags/Framework/index.html">
 <meta property="og:site_name" content="张帆">
 <meta property="og:description" content="张帆 zhangfan zzhangffan">
 <meta property="og:locale" content="zh_CN">
@@ -129,12 +129,11 @@
     
     <main id="main" role="main">
       
-	
-
-
-	<section class="page-header archive">
-    <h1>- <span>2018.2</span> -</h1>
+	<section class="page-header tag">
+    <h1>- <span>Framework</span> -</h1>
   </section>
+
+
 
 
 
@@ -146,74 +145,39 @@
   <section class="post-header">
     
       <h2 class="title">
-        <a href="/20180228/threadlocal-analyze/">
-          ThreadLocal分析
+        <a href="/20180303/spring-transcation-propagation-behavior/">
+          Spring事务传播行为
         </a>
       </h2>
       
       <div class="subtitle">
           <time>
-            2月 28, 2018
+            3月 3, 2018
           </time>
           
             <span class="tags">
                  <span class="iconfont icon-tag"></span>
-                 <a class="tag-link" href="/tags/Java/">Java</a> / <a class="tag-link" href="/tags/ThreadLocal/">ThreadLocal</a>
+                 <a class="tag-link" href="/tags/Framework/">Framework</a> / <a class="tag-link" href="/tags/Spring/">Spring</a>
               </span>
           
       </div>
   </section>
   <section class="content">
     
-ThreadLocal 位于java.lang包下，用来为线程提供局部变量。
+Spring对事务的解决方案，是对 数据库事务 的补充或扩展。它是解决方法间的事务传播。
 
-ThreadLocal用例假设我们有一个序列生成器，用于生成从1开始，自增为1的序列，代码如下：123456789101112131415public cla...
+事务传播行为Spring一共提供了7种事务传播行为：假设事务从方法A传播到了方法B，面对方法B他需要问一个问题：事务A有事务吗？
 
-    <div class="readmore">
-      <a href="/20180228/threadlocal-analyze/" class="iconfont icon-more">更多>>></a>
-    </div>
-
-  </section>
-</article>
-  
-    <article class="post   animated fade-in-top">
-
-  <section class="post-header">
-    
-      <h2 class="title">
-        <a href="/20180227/proxy/">
-          jdk及CGLib代理
-        </a>
-      </h2>
-      
-      <div class="subtitle">
-          <time>
-            2月 27, 2018
-          </time>
-          
-            <span class="tags">
-                 <span class="iconfont icon-tag"></span>
-                 <a class="tag-link" href="/tags/CGLib/">CGLib</a> / <a class="tag-link" href="/tags/Java/">Java</a> / <a class="tag-link" href="/tags/Proxy/">Proxy</a>
-              </span>
-          
-      </div>
-  </section>
-  <section class="content">
-    
-代理：为其他对象提供一种代理以控制对这个对象的访问。
-
-静态代理程序运行前就已经存在的编译好的代理类
-假设我们有一个Hello类，其中有一个sayHello的方法，输出一个字符串，代码如下：123456public class Hello...
+PROPAGA...
 
     <div class="readmore">
-      <a href="/20180227/proxy/" class="iconfont icon-more">更多>>></a>
+      <a href="/20180303/spring-transcation-propagation-behavior/" class="iconfont icon-more">更多>>></a>
     </div>
 
   </section>
 </article>
   
 </section>
-
 
 
       <script>NProgress.set(0.6);</script>
