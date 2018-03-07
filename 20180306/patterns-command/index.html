@@ -4,22 +4,24 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Tag: Hexo | 张帆</title>
+  <title>命令模式 | 张帆</title>
   <meta name="description" content="zhangfan." />
   <meta name="keywords" content="zzhangffan,zhangfan" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="张帆 zhangfan zzhangffan">
-<meta property="og:type" content="website">
-<meta property="og:title" content="张帆">
-<meta property="og:url" content="zzhangffan.com/tags/Hexo/index.html">
+  <meta name="description" content="命令模式（行为型模式）：封装命令，将命令的发出者与执行者之间解耦。  实现创建命令执行者类：123456public class Receiver &amp;#123;    public void action() &amp;#123;        System.out.println(&amp;quot;Receiver::action&amp;quot;);    &amp;#125;&amp;#125; 创建命令接口：1234pub">
+<meta name="keywords" content="patterns,Command">
+<meta property="og:type" content="article">
+<meta property="og:title" content="命令模式">
+<meta property="og:url" content="zzhangffan.com/20180306/patterns-command/index.html">
 <meta property="og:site_name" content="张帆">
-<meta property="og:description" content="张帆 zhangfan zzhangffan">
+<meta property="og:description" content="命令模式（行为型模式）：封装命令，将命令的发出者与执行者之间解耦。  实现创建命令执行者类：123456public class Receiver &amp;#123;    public void action() &amp;#123;        System.out.println(&amp;quot;Receiver::action&amp;quot;);    &amp;#125;&amp;#125; 创建命令接口：1234pub">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2018-03-07T00:11:50.068Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="张帆">
-<meta name="twitter:description" content="张帆 zhangfan zzhangffan">
+<meta name="twitter:title" content="命令模式">
+<meta name="twitter:description" content="命令模式（行为型模式）：封装命令，将命令的发出者与执行者之间解耦。  实现创建命令执行者类：123456public class Receiver &amp;#123;    public void action() &amp;#123;        System.out.println(&amp;quot;Receiver::action&amp;quot;);    &amp;#125;&amp;#125; 创建命令接口：1234pub">
   
   
     <link rel="icon" href="/image/favicon.ico">
@@ -128,64 +130,49 @@
     <script>NProgress.set(0.4);</script>
     
     <main id="main" role="main">
-      
-	<section class="page-header tag">
-    <h1>- <span>Hexo</span> -</h1>
-  </section>
-
-
-
-
-
-
-<section class="post-list">
-	
-    <article class="post   animated fade-in-top">
-
-  <section class="post-header">
-    
-      <h2 class="title">
-        <a href="/20171231/hexo-github-pages/">
-          Hexo + GitHub Pages搭建个人博客
+      <article id="post-patterns-command"
+  class="post article white-box article-type-post animated fade-in-top"
+  itemscope itemprop="blogPost">
+  <section class="post-header article-header">
+    <h2 class="title">
+        <a href="/20180306/patterns-command/">
+          命令模式
         </a>
       </h2>
-      
       <div class="subtitle">
           <time>
-            12月 31, 2017
+            3月 6, 2018
           </time>
           
             <span class="tags">
-                 <span class="iconfont icon-tag"></span>
-                 <a class="tag-link" href="/tags/Hexo/">Hexo</a>
+                <span class="iconfont icon-tag"></span>
+                <a class="tag-link" href="/tags/Command/">Command</a> / <a class="tag-link" href="/tags/patterns/">patterns</a>
               </span>
           
       </div>
   </section>
   <section class="content">
-    
-准备工具
-
-Node.js（必须）用于支持Hexo，生成静态页面
-Git（必须）用于推送本地内容
-注册一个GitHib账号，存放文件，服务器
-
-
-搭建环境
-
-Node.jsWindows官网下载.msi文件到本地，双击安装即可
-Linux...
-
-    <div class="readmore">
-      <a href="/20171231/hexo-github-pages/" class="iconfont icon-more">更多>>></a>
+    <div class="article-entry" itemprop="articleBody">
+      <blockquote>
+<p>命令模式（行为型模式）：封装命令，将命令的发出者与执行者之间解耦。</p>
+</blockquote>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>创建命令执行者类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class Receiver &#123;</span><br><span class="line"></span><br><span class="line">    public void action() &#123;</span><br><span class="line">        System.out.println(&quot;Receiver::action&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>创建命令接口：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface Command &#123;</span><br><span class="line"></span><br><span class="line">    void execute();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>创建实际命令类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class ConcreteCommand implements Command &#123;</span><br><span class="line"></span><br><span class="line">    private Receiver receiver;</span><br><span class="line"></span><br><span class="line">    public ConcreteCommand(Receiver receiver) &#123;</span><br><span class="line">        this.receiver = receiver;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void execute() &#123;</span><br><span class="line">        receiver.action();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>创建命令发出者类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class Invoker &#123;</span><br><span class="line"></span><br><span class="line">    private Command command;</span><br><span class="line"></span><br><span class="line">    public Invoker(Command command) &#123;</span><br><span class="line">        this.command = command;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void action() &#123;</span><br><span class="line">        command.execute();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>测试：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class CommandTest &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Receiver receiver = new Receiver();</span><br><span class="line"></span><br><span class="line">        //通过命令将发出者和执行者解耦</span><br><span class="line">        Command cmd = new ConcreteCommand(receiver);</span><br><span class="line"></span><br><span class="line">        Invoker invoker = new Invoker(cmd);</span><br><span class="line">        invoker.action();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>程序运行结果：</p>
+<blockquote>
+<p>Receiver::action</p>
+</blockquote>
+<p>Process finished with exit code 0</p>
+<h1 id="（完）"><a href="#（完）" class="headerlink" title="（完）"></a>（完）</h1>
     </div>
-
   </section>
-</article>
+
   
-</section>
-
-
+  
+</article>
       <script>NProgress.set(0.6);</script>
     </main>
     

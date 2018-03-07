@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>责任链模式 | 张帆</title>
+  <meta name="description" content="zhangfan." />
+  <meta name="keywords" content="zzhangffan,zhangfan" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="责任链模式（行为型模式）：让多个对象都有机会处理请求，将这些对象连成一条链，处理请求时，让请求在这个链上传递，直到链式的摸一个对象处理了这个请求。避免请求的发送者与处理者耦合。  实现定义一个日志处理模板类：1234567891011121314151617181920212223242526272829303132public abstract class AbstractLogger &amp;#1">
+<meta name="keywords" content="patterns,ResponsibilityChain">
+<meta property="og:type" content="article">
+<meta property="og:title" content="责任链模式">
+<meta property="og:url" content="zzhangffan.com/20180306/patterns-responsibility-chain/index.html">
+<meta property="og:site_name" content="张帆">
+<meta property="og:description" content="责任链模式（行为型模式）：让多个对象都有机会处理请求，将这些对象连成一条链，处理请求时，让请求在这个链上传递，直到链式的摸一个对象处理了这个请求。避免请求的发送者与处理者耦合。  实现定义一个日志处理模板类：1234567891011121314151617181920212223242526272829303132public abstract class AbstractLogger &amp;#1">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2018-03-06T15:05:24.534Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="责任链模式">
+<meta name="twitter:description" content="责任链模式（行为型模式）：让多个对象都有机会处理请求，将这些对象连成一条链，处理请求时，让请求在这个链上传递，直到链式的摸一个对象处理了这个请求。避免请求的发送者与处理者耦合。  实现定义一个日志处理模板类：1234567891011121314151617181920212223242526272829303132public abstract class AbstractLogger &amp;#1">
+  
+  
+    <link rel="icon" href="/image/favicon.ico">
+  
+  
+  <link rel='stylesheet' href='//cdnjs.xyz/libs/nprogress/0.2.0/nprogress.css'/>
+  <link rel="stylesheet" href="//cdnjs.xyz/libs/highlight/9.12.0/styles/github-gist.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_405585_2mmfrz9pgd7h9f6r.css">
+  <script src='//cdnjs.xyz/libs/nprogress/0.2.0/nprogress.js'></script>
+  <!-- <script>try{Typekit.load({ async: false });}catch(e){}</script> -->
+  <link rel="stylesheet" href="/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-93986029-1', 'auto');
+  ga('send', 'pageview');
+  
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  
+  <script>NProgress.start();</script>
+  
+  <div id="site-wrapper">
+    
+    <header class="header">
+  <div class="header-wrapper">
+    <a href="/">
+      <img src="/image/logo.jpg" class="logo"/>
+      <!-- <span class="site-desc">
+        
+      </span> -->
+    </a>
+    <div class="social-wrapper">
+      
+        
+          <a href="https://github.com/zzhangffan" class="social github" target="_blank" rel="external">
+            <span class="iconfont icon-github"></span>
+          </a>
+          
+          <a href="/atom.xml" class="social rss" target="_blank" rel="external">
+            <span class="iconfont icon-rss"></span>
+          </a>
+          
+      
+      
+      <a href="#" class="social search-do" target="_blank" rel="external">
+        <span class="iconfont icon-search"></span>
+      </a>
+            
+      <!-- <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="zzhangffan.com"></form> -->
+    </div>
+    <div class="search-wrap">
+      <div class="search-content animated fade-in">
+        <p class="search-input">
+          <span class="iconfont icon-search"></span>
+          <input tabindex="1">
+        </p>
+        <ul class="search-result">
+            
+              <div class="tags">
+                   <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Command/">Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Observer/">Observer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/patterns/">patterns</a></li></ul>
+                </div>
+            
+        </ul>
+      </div>
+    </div>
+    <nav class="header-nav">
+      
+        <a href="/" class="archives">
+          home
+        </a>
+        
+        <a href="/tags/Java/" class="archives">
+          Java
+        </a>
+        
+        <a href="/tags/Framework/" class="archives">
+          Framework
+        </a>
+        
+        <a href="/tags/live/" class="archives">
+          live
+        </a>
+        
+        <a href="/archives" class="archives">
+          archives
+        </a>
+        
+        <a href="/about/" class="archives">
+          About
+        </a>
+        
+    </nav>
+  </div>
+</header>
+    <script>NProgress.set(0.4);</script>
+    
+    <main id="main" role="main">
+      <article id="post-patterns-responsibility-chain"
+  class="post article white-box article-type-post animated fade-in-top"
+  itemscope itemprop="blogPost">
+  <section class="post-header article-header">
+    <h2 class="title">
+        <a href="/20180306/patterns-responsibility-chain/">
+          责任链模式
+        </a>
+      </h2>
+      <div class="subtitle">
+          <time>
+            3月 6, 2018
+          </time>
+          
+            <span class="tags">
+                <span class="iconfont icon-tag"></span>
+                <a class="tag-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a> / <a class="tag-link" href="/tags/patterns/">patterns</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    <div class="article-entry" itemprop="articleBody">
+      <blockquote>
+<p>责任链模式（行为型模式）：让多个对象都有机会处理请求，将这些对象连成一条链，处理请求时，让请求在这个链上传递，直到链式的摸一个对象处理了这个请求。避免请求的发送者与处理者耦合。</p>
+</blockquote>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>定义一个日志处理模板类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">public abstract class AbstractLogger &#123;</span><br><span class="line"></span><br><span class="line">    public static int INFO = 1;</span><br><span class="line">    public static int DEBUG = 2;</span><br><span class="line">    public static int ERROR = 3;</span><br><span class="line"></span><br><span class="line">    protected int level;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 保存下一个处理程序引用（一个接一个形成链）</span><br><span class="line">     */</span><br><span class="line">    protected AbstractLogger nextLogger;</span><br><span class="line"></span><br><span class="line">    public void setNextLogger(AbstractLogger nextLogger) &#123;</span><br><span class="line">        this.nextLogger = nextLogger;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 模板处理方法</span><br><span class="line">     */</span><br><span class="line">    public void logMessage(int level, String message) &#123;</span><br><span class="line">        if (this.level &lt;= level) &#123;</span><br><span class="line">        	//“钩子”方法</span><br><span class="line">            write(message);</span><br><span class="line">        &#125;</span><br><span class="line">        if (nextLogger != null) &#123;</span><br><span class="line">            nextLogger.logMessage(level, message);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    abstract protected void write(String message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>创建具体的日志处理类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//文件日志</span><br><span class="line">public class FileLogger extends AbstractLogger &#123;</span><br><span class="line"></span><br><span class="line">    public FileLogger(int level) &#123;</span><br><span class="line">        this.level = level;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void write(String message) &#123;</span><br><span class="line">        System.out.println(&quot;File::Logger:&quot; + message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//错误日志</span><br><span class="line">public class ErrorLogger extends AbstractLogger &#123;</span><br><span class="line"></span><br><span class="line">    public ErrorLogger(int level) &#123;</span><br><span class="line">        this.level = level;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void write(String message) &#123;</span><br><span class="line">        System.out.println(&quot;Error Console::Logger:&quot; + message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//控制台日志</span><br><span class="line">public class ConsoleLogger extends AbstractLogger &#123;</span><br><span class="line"></span><br><span class="line">    public ConsoleLogger(int level) &#123;</span><br><span class="line">        this.level = level;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void write(String message) &#123;</span><br><span class="line">        System.out.println(&quot;Standard Console::Logger:&quot; + message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试程序：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public class ResponsibilityChainTest &#123;</span><br><span class="line"></span><br><span class="line">    private static AbstractLogger getChainOfLoggers()&#123;</span><br><span class="line">        AbstractLogger errorLogger = new ErrorLogger(AbstractLogger.ERROR);</span><br><span class="line">        AbstractLogger fileLogger = new FileLogger(AbstractLogger.DEBUG);</span><br><span class="line">        AbstractLogger consoleLogger = new FileLogger(AbstractLogger.INFO);</span><br><span class="line"></span><br><span class="line">        //串成链  errorLogger =&gt; fileLogger =&gt; consoleLogger</span><br><span class="line">        errorLogger.setNextLogger(fileLogger);</span><br><span class="line">        fileLogger.setNextLogger(consoleLogger);</span><br><span class="line"></span><br><span class="line">        return errorLogger;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        //获取日志执行链</span><br><span class="line">        AbstractLogger loggerChain = getChainOfLoggers();</span><br><span class="line"></span><br><span class="line">        //分别打印不同级别的日志，</span><br><span class="line">        //而不用关注具体的处理程序是哪一个，</span><br><span class="line">        //只管把“打印不同级别日志”这个请求往执行链传就行</span><br><span class="line">        loggerChain.logMessage(AbstractLogger.INFO,&quot;This is an information.&quot;);</span><br><span class="line"></span><br><span class="line">        loggerChain.logMessage(AbstractLogger.DEBUG, &quot;This is an debug level information.&quot;);</span><br><span class="line"></span><br><span class="line">        loggerChain.logMessage(AbstractLogger.ERROR, &quot;This is an error information.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>程序运行结果：</p>
+<blockquote>
+<p>File::Logger:This is an information.<br>File::Logger:This is an debug level information.<br>File::Logger:This is an debug level information.<br>Error Console::Logger:This is an error information.<br>File::Logger:This is an error information.<br>File::Logger:This is an error information.</p>
+</blockquote>
+<p>Process finished with exit code 0</p>
+<h2 id="其他例子"><a href="#其他例子" class="headerlink" title="其他例子"></a>其他例子</h2><p>Servlet中Filter、FilterChain<br>…</p>
+<h1 id="（完）"><a href="#（完）" class="headerlink" title="（完）"></a>（完）</h1><blockquote>
+<p>程序例子来自：<a href="http://www.runoob.com/design-pattern/chain-of-responsibility-pattern.html" target="_blank" rel="noopener">菜鸟教程</a></p>
+</blockquote>
+
+    </div>
+  </section>
+
+  
+  
+</article>
+      <script>NProgress.set(0.6);</script>
+    </main>
+    
+    <footer class="footer">
+  <div class="footer-wrap">
+    <div class="footer-link">
+      
+      <h3>LINKS</h3>
+      <p>
+        
+          <a href="" target="_blank"></a>
+        
+      </p>
+      
+    </div>
+    <div class="footer-tags">
+      
+        <h3>TAGS</h3>        
+        <div class="tags">
+             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Command/">Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Observer/">Observer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/patterns/">patterns</a></li></ul>
+          </div>
+      
+    </div>
+    <div class="footer-info">
+        <div>Theme <span class="codename"><a href="https://github.com/GGICE/hexo-icer" target="_blank">icer</a></span> designed & coded by <a href="https://ice.gs/" target="_blank">GGICE</a></div>
+        <div>Copyright &copy; 2017-2018, <a href="/">张帆</a>  . All rights reserved .</div>
+      </div>
+  </div>
+</footer>
+
+
+    <script>NProgress.set(0.8);</script>
+    
+  </div>
+
+  <script src="//cdnjs.xyz/libs/highlight/9.12.0/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/main.js"></script>
+
+<!-- Commit -->
+
+
+
+  <script>
+    NProgress.done();
+  </script>
+  
+</body>
+</html>

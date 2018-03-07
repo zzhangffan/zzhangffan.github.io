@@ -90,7 +90,7 @@
         <ul class="search-result">
             
               <div class="tags">
-                   <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li></ul>
+                   <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Command/">Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Observer/">Observer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/patterns/">patterns</a></li></ul>
                 </div>
             
         </ul>
@@ -141,6 +141,111 @@
 
 <section class="post-list">
 	
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/20180306/patterns-command/">
+          命令模式
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            3月 6, 2018
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/Command/">Command</a> / <a class="tag-link" href="/tags/patterns/">patterns</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    
+命令模式（行为型模式）：封装命令，将命令的发出者与执行者之间解耦。
+
+实现创建命令执行者类：123456public class Receiver &#123;    public void action() &#123;        ...
+
+    <div class="readmore">
+      <a href="/20180306/patterns-command/" class="iconfont icon-more">更多>>></a>
+    </div>
+
+  </section>
+</article>
+  
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/20180306/patterns-responsibility-chain/">
+          责任链模式
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            3月 6, 2018
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a> / <a class="tag-link" href="/tags/patterns/">patterns</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    
+责任链模式（行为型模式）：让多个对象都有机会处理请求，将这些对象连成一条链，处理请求时，让请求在这个链上传递，直到链式的摸一个对象处理了这个请求。避免请求的发送者与处理者耦合。
+
+实现定义一个日志处理模板类：123456789101112...
+
+    <div class="readmore">
+      <a href="/20180306/patterns-responsibility-chain/" class="iconfont icon-more">更多>>></a>
+    </div>
+
+  </section>
+</article>
+  
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/20180306/patterns-observer/">
+          观察者模式
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            3月 6, 2018
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/Observer/">Observer</a> / <a class="tag-link" href="/tags/patterns/">patterns</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    
+观察者模式（行为型模式）：观察者观察被观察目标类的状态，被观察目标类管理所有观察它的组件，当自身状态发生改变时，通知所有的观察者组件。
+
+实现定义被观察目标：1234567891011121314151617181920212223242...
+
+    <div class="readmore">
+      <a href="/20180306/patterns-observer/" class="iconfont icon-more">更多>>></a>
+    </div>
+
+  </section>
+</article>
+  
     <article class="post   animated fade-in-top">
 
   <section class="post-header">
@@ -269,7 +374,7 @@ PROPAGA...
       
         <h3>TAGS</h3>        
         <div class="tags">
-             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li></ul>
+             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Command/">Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Observer/">Observer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/patterns/">patterns</a></li></ul>
           </div>
       
     </div>

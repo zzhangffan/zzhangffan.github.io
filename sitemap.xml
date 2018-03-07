@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>zzhangffan.com/20180306/patterns-command/</loc>
+    
+    <lastmod>2018-03-07T00:11:50.068Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>zzhangffan.com/20180306/patterns-responsibility-chain/</loc>
+    
+    <lastmod>2018-03-06T15:05:24.534Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>zzhangffan.com/20180306/patterns-observer/</loc>
+    
+    <lastmod>2018-03-06T14:26:25.439Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>zzhangffan.com/20180303/transaction/</loc>
     
     <lastmod>2018-03-04T08:49:34.456Z</lastmod>
