@@ -4,23 +4,22 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>事务 | 张帆</title>
+  <title>Tag: 排序算法 | 张帆</title>
   <meta name="description" content="zhangfan." />
   <meta name="keywords" content="zzhangffan,zhangfan" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是事务 事务，一般是指要做的或所做的事情。  数据库事务数据库事务，是指作为单个逻辑工作单元执行的一系列操作,要么完全地执行,要么完全地不执行。 事务的特性：  原子性（基础）事务必须是一个不可分割的整体 一致性（要求）事务（一组操作）完成时，必须让数据具有一致性。例如：你的朋友小明还钱给你，他从他的账上扣了1000，可你的账上并没有加1000块，你肯定认为这笔账没有还。这种情况就是非一致性的">
-<meta property="og:type" content="article">
-<meta property="og:title" content="事务">
-<meta property="og:url" content="zzhangffan.com/20180303/transaction/index.html">
+  <meta name="description" content="张帆 zhangfan zzhangffan">
+<meta property="og:type" content="website">
+<meta property="og:title" content="张帆">
+<meta property="og:url" content="zzhangffan.com/tags/排序算法/index.html">
 <meta property="og:site_name" content="张帆">
-<meta property="og:description" content="什么是事务 事务，一般是指要做的或所做的事情。  数据库事务数据库事务，是指作为单个逻辑工作单元执行的一系列操作,要么完全地执行,要么完全地不执行。 事务的特性：  原子性（基础）事务必须是一个不可分割的整体 一致性（要求）事务（一组操作）完成时，必须让数据具有一致性。例如：你的朋友小明还钱给你，他从他的账上扣了1000，可你的账上并没有加1000块，你肯定认为这笔账没有还。这种情况就是非一致性的">
+<meta property="og:description" content="张帆 zhangfan zzhangffan">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2018-03-04T08:49:34.456Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="事务">
-<meta name="twitter:description" content="什么是事务 事务，一般是指要做的或所做的事情。  数据库事务数据库事务，是指作为单个逻辑工作单元执行的一系列操作,要么完全地执行,要么完全地不执行。 事务的特性：  原子性（基础）事务必须是一个不可分割的整体 一致性（要求）事务（一组操作）完成时，必须让数据具有一致性。例如：你的朋友小明还钱给你，他从他的账上扣了1000，可你的账上并没有加1000块，你肯定认为这笔账没有还。这种情况就是非一致性的">
+<meta name="twitter:title" content="张帆">
+<meta name="twitter:description" content="张帆 zhangfan zzhangffan">
   
   
     <link rel="icon" href="/image/favicon.ico">
@@ -129,77 +128,149 @@
     <script>NProgress.set(0.4);</script>
     
     <main id="main" role="main">
-      <article id="post-transaction"
-  class="post article white-box article-type-post animated fade-in-top"
-  itemscope itemprop="blogPost">
-  <section class="post-header article-header">
-    <h2 class="title">
-        <a href="/20180303/transaction/">
-          事务
+      
+	<section class="page-header tag">
+    <h1>- <span>排序算法</span> -</h1>
+  </section>
+
+
+
+
+
+
+<section class="post-list">
+	
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/20180307/sortAlgorithm-quickSort/">
+          排序算法——快速排序
         </a>
       </h2>
+      
       <div class="subtitle">
           <time>
-            3月 3, 2018
+            3月 7, 2018
           </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/Java/">Java</a> / <a class="tag-link" href="/tags/排序算法/">排序算法</a>
+              </span>
           
       </div>
   </section>
   <section class="content">
-    <div class="article-entry" itemprop="articleBody">
-      <h2 id="什么是事务"><a href="#什么是事务" class="headerlink" title="什么是事务"></a>什么是事务</h2><blockquote>
-<p>事务，一般是指要做的或所做的事情。</p>
-</blockquote>
-<h2 id="数据库事务"><a href="#数据库事务" class="headerlink" title="数据库事务"></a>数据库事务</h2><p>数据库事务，是指作为单个逻辑工作单元执行的一系列操作,要么完全地执行,要么完全地不执行。</p>
-<p>事务的特性：</p>
-<ul>
-<li>原子性（<note>基础</note>）<br>事务必须是一个不可分割的整体</li>
-<li>一致性（<note>要求</note>）<br>事务（一组操作）完成时，必须让数据具有一致性。例如：你的朋友小明还钱给你，他从他的账上扣了1000，可你的账上并没有加1000块，你肯定认为这笔账没有还。这种情况就是非一致性的。</li>
-<li>隔离性（<note>手段</note>）<br>数据库操作之间彼此应该是没有任何干扰的，假设你正在往数据库里查数据，别人正好在删数据，这种情况下你读的数据肯定是有问题的。<br>为了实现操作之间彼此没有干扰，有专家定义了一个规范（事务隔离级别）：</li>
-</ul>
-<ol>
-<li>READ_UNCOMMITTED; 读未提交，一个事务可以读到另一个事务未提交的数据。</li>
-<li>READ_COMMITTED; 读提交，一个事务要等另一个事务提交才能读数据。</li>
-<li>REPEATABLE_READ; 重复读，一个事务开启时，其他事务不允许再做修改操作。</li>
-<li>SERIALIZABLE; 序列化，事务串行化顺序执行。</li>
-</ol>
-<ul>
-<li>持久性（<note>目的</note>）<br>事务一旦提交，数据库的修改应该永久的。还是还钱的例子，小明从他的账上扣了1000，你的账上也加了1000块，转账完成后，在不做其他数据库操作的情况下，这1000块钱应该永远存在你的账户。</li>
-</ul>
-<h2 id="事务面临的问题"><a href="#事务面临的问题" class="headerlink" title="事务面临的问题"></a>事务面临的问题</h2><p>上面说事务的特性时，讲到的事务隔离级别就是为了解决下面的问题：</p>
-<ul>
-<li>脏读（读到垃圾数据）<blockquote>
-<p>事务A从账户中转出1000元，事务B查询余额为0元，事务A刚才的转账事务，余额恢复为1000元，事务B往里存了1000元，并提交了事务。现在账户中余额为1000元，这肯定是不对的。</p>
-</blockquote>
-</li>
-</ul>
-<p>脏读：一个事务读到了另一个事务未提交的数据。通过设置数据库隔离级别为 TEAD_COMMITTED 解决。</p>
-<ul>
-<li>不可重复读<blockquote>
-<p>事务A查询余额为1000元，事务B查询余额为1000元，事务A取出1000元并提交了事务，事务A再次查询余额，余额变成了0元。</p>
-</blockquote>
-</li>
-</ul>
-<p>不可重复读：一个事读了另一个事务已提交的更新操作。通过设置数据库级别为 REPEATABLE_READ 解决。</p>
-<ul>
-<li>幻读<blockquote>
-<p>事务B查询班级人数为30人，事务A新增一个同学并提交事务，事务B再次统计人数为31元。事务B很懵逼，这怎么像鬼一样，突然就多出一个人来了。</p>
-</blockquote>
-</li>
-</ul>
-<p>幻读：一个事务读到另一个事务提交的新增操作。通过设置数据库级别为 SERIALIZABLE 解决。</p>
-<note>大多数数据库默认设置 READ_COMMITTED 为默认隔离级别，MySql默认使用 REPEATABLE-READ 为默认隔离级别。</note>
+    实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748public class QuickSort &#123;  ...
 
-<hr>
-<p><a href="https://www.cnblogs.com/wajika/p/6680200.html" target="_blank" rel="noopener">数据库怎么实现隔离的？</a></p>
-<p><a href="/20180303/spring-transcation-propagation-behavior/">Spirng事务支持</a></p>
-<h1 id="（完）"><a href="#（完）" class="headerlink" title="（完）"></a>（完）</h1>
+    <div class="readmore">
+      <a href="/20180307/sortAlgorithm-quickSort/" class="iconfont icon-more">更多>>></a>
     </div>
-  </section>
 
-  
-  
+  </section>
 </article>
+  
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/20180307/sortAlgorithm-bubbleSort/">
+          排序算法——冒泡排序
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            3月 7, 2018
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/Java/">Java</a> / <a class="tag-link" href="/tags/排序算法/">排序算法</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    实现123456789101112131415161718192021222324public class BubbleSort &#123;    public static void main(String[] args) &#123;...
+
+    <div class="readmore">
+      <a href="/20180307/sortAlgorithm-bubbleSort/" class="iconfont icon-more">更多>>></a>
+    </div>
+
+  </section>
+</article>
+  
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/20180307/sortAlgorithm-selectionSort/">
+          排序算法——简单选择排序
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            3月 7, 2018
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/Java/">Java</a> / <a class="tag-link" href="/tags/排序算法/">排序算法</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    实现123456789101112131415161718192021222324252627public class SelectionSort &#123;    public static void main(String[] arg...
+
+    <div class="readmore">
+      <a href="/20180307/sortAlgorithm-selectionSort/" class="iconfont icon-more">更多>>></a>
+    </div>
+
+  </section>
+</article>
+  
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/20180307/sortAlgorithm-insertSort/">
+          排序算法——直接插入排序
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            3月 7, 2018
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/Java/">Java</a> / <a class="tag-link" href="/tags/排序算法/">排序算法</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    实现1234567891011121314151617181920212223242526public class InsertSort &#123;    public static void main(String[] args) &#...
+
+    <div class="readmore">
+      <a href="/20180307/sortAlgorithm-insertSort/" class="iconfont icon-more">更多>>></a>
+    </div>
+
+  </section>
+</article>
+  
+</section>
+
+
       <script>NProgress.set(0.6);</script>
     </main>
     

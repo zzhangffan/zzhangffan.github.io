@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="zzhangffan.com/"/>
-  <updated>2018-03-07T00:11:50.068Z</updated>
+  <updated>2018-03-07T06:59:29.860Z</updated>
   <id>zzhangffan.com/</id>
   
   <author>
@@ -15,6 +15,106 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>排序算法——快速排序</title>
+    <link href="zzhangffan.com/20180307/sortAlgorithm-quickSort/"/>
+    <id>zzhangffan.com/20180307/sortAlgorithm-quickSort/</id>
+    <published>2018-03-07T06:57:58.000Z</published>
+    <updated>2018-03-07T06:59:29.860Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">public class QuickSort &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * 思想：选定一个基准，从待排序序列两侧开始探测</span><br><span class="line">         * 哨兵a：从右往左找一个小于基准的数</span><br><span class="line">         * 哨兵b：从左往右找一个大于基准的数</span><br><span class="line">         * 交换它们，直到两个哨兵相遇，交换基准</span><br><span class="line">         * 现在基准左边的数都小于基准，右边的数都大于基准</span><br><span class="line">         * 递归如此</span><br><span class="line">         */</span><br><span class="line">        int[] needSortArr = &#123;1, 456, 25, 352, 45, 2, 5, 6, 9, 899, 52, 65, 3&#125;;</span><br><span class="line">        quickSort(needSortArr, 0, needSortArr.length - 1);</span><br><span class="line"></span><br><span class="line">        for (int i : needSortArr) &#123;</span><br><span class="line">            System.out.print(i + &quot;\t&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void quickSort(int[] needSortArr, int left, int right) &#123;</span><br><span class="line">        if (left &gt; right)</span><br><span class="line">            return;</span><br><span class="line">        int i = left;</span><br><span class="line">        int j = right;</span><br><span class="line">        //基准</span><br><span class="line">        int datum = needSortArr[left];</span><br><span class="line"></span><br><span class="line">        while (i != j) &#123;</span><br><span class="line"></span><br><span class="line">            //从右往左探测</span><br><span class="line">            while (needSortArr[j] &gt; datum &amp;&amp; i &lt; j) &#123;</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            needSortArr[i] = needSortArr[j];</span><br><span class="line">            //反方向</span><br><span class="line">            while (needSortArr[i] &lt; datum &amp;&amp; i &lt; j) &#123;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            needSortArr[j] = needSortArr[i];</span><br><span class="line">        &#125;</span><br><span class="line">        //基准</span><br><span class="line">        needSortArr[j] = datum;</span><br><span class="line">        //分左右块递归</span><br><span class="line">        quickSort(needSortArr, left, i - 1);</span><br><span class="line">        quickSort(needSortArr, i + 1, right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="（完）"><a href="#（完）" class="headerlink" title="（完）"></a>（完）</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;实现&quot;&gt;&lt;a href=&quot;#实现&quot; class=&quot;headerlink&quot; title=&quot;实现&quot;&gt;&lt;/a&gt;实现&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span 
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="zzhangffan.com/tags/Java/"/>
+    
+      <category term="排序算法" scheme="zzhangffan.com/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>排序算法——冒泡排序</title>
+    <link href="zzhangffan.com/20180307/sortAlgorithm-bubbleSort/"/>
+    <id>zzhangffan.com/20180307/sortAlgorithm-bubbleSort/</id>
+    <published>2018-03-07T05:58:29.000Z</published>
+    <updated>2018-03-07T05:59:13.157Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public class BubbleSort &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * 思想：依次比较两个相邻的数，让大的往下落，小的往上冒</span><br><span class="line">         */</span><br><span class="line">        int[] needSortArr = &#123;1, 456, 25, 352, 1, 45, 2, 5, 6, 9, 899, 52, 65, 3&#125;;</span><br><span class="line"></span><br><span class="line">        for (int i = 0; i &lt; needSortArr.length - 1; i++) &#123;</span><br><span class="line">            for (int j = 0; j &lt; needSortArr.length - 1 - i; j++) &#123;</span><br><span class="line">                if (needSortArr[j] &gt; needSortArr[j + 1]) &#123;</span><br><span class="line">                    int temp = needSortArr[j];</span><br><span class="line">                    needSortArr[j] = needSortArr[j + 1];</span><br><span class="line">                    needSortArr[j + 1] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        for (int i : needSortArr) &#123;</span><br><span class="line">            System.out.print(i + &quot;\t&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="（完）"><a href="#（完）" class="headerlink" title="（完）"></a>（完）</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;实现&quot;&gt;&lt;a href=&quot;#实现&quot; class=&quot;headerlink&quot; title=&quot;实现&quot;&gt;&lt;/a&gt;实现&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span 
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="zzhangffan.com/tags/Java/"/>
+    
+      <category term="排序算法" scheme="zzhangffan.com/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>排序算法——简单选择排序</title>
+    <link href="zzhangffan.com/20180307/sortAlgorithm-selectionSort/"/>
+    <id>zzhangffan.com/20180307/sortAlgorithm-selectionSort/</id>
+    <published>2018-03-07T05:44:10.000Z</published>
+    <updated>2018-03-07T05:45:16.729Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">public class SelectionSort &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        /**</span><br><span class="line">         * 思想：每趟选择出最小的数放到已有序列的后面</span><br><span class="line">         */</span><br><span class="line">        int[] needSortArr = &#123;1, 456, 25, 352, 1, 45, 2, 5, 6, 9, 899, 52, 65, 3&#125;;</span><br><span class="line"></span><br><span class="line">        for (int i = 0; i &lt; needSortArr.length; i++) &#123;</span><br><span class="line">            int pos = i;</span><br><span class="line">            int j = i + 1;</span><br><span class="line">            for (;j &lt; needSortArr.length; j++) &#123;</span><br><span class="line">                if (needSortArr[j] &lt; needSortArr[pos])</span><br><span class="line">                    pos = j;</span><br><span class="line">            &#125;</span><br><span class="line">            //交换</span><br><span class="line">            int temp = needSortArr[i];</span><br><span class="line">            needSortArr[i] = needSortArr[pos];</span><br><span class="line">            needSortArr[pos] = temp;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        for (int i : needSortArr) &#123;</span><br><span class="line">            System.out.print(i + &quot;\t&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="（完）"><a href="#（完）" class="headerlink" title="（完）"></a>（完）</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;实现&quot;&gt;&lt;a href=&quot;#实现&quot; class=&quot;headerlink&quot; title=&quot;实现&quot;&gt;&lt;/a&gt;实现&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span 
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="zzhangffan.com/tags/Java/"/>
+    
+      <category term="排序算法" scheme="zzhangffan.com/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>排序算法——直接插入排序</title>
+    <link href="zzhangffan.com/20180307/sortAlgorithm-insertSort/"/>
+    <id>zzhangffan.com/20180307/sortAlgorithm-insertSort/</id>
+    <published>2018-03-07T05:04:23.000Z</published>
+    <updated>2018-03-07T05:41:54.138Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">public class InsertSort &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        /**</span><br><span class="line">         * 思想：排序一组数 a[0..n-1]</span><br><span class="line">         *  1.初始a[0]为有序区</span><br><span class="line">         *  2.比较，将a[i]放入有序区</span><br><span class="line">         *  3.直到i = n -1</span><br><span class="line">         */</span><br><span class="line">        int[] needSortArr = &#123;1, 456, 25, 352, 1, 45, 2, 5, 6, 9, 899, 52, 65, 3&#125;;</span><br><span class="line"></span><br><span class="line">        int temp;</span><br><span class="line">        for (int i = 1; i &lt; needSortArr.length; i++) &#123;</span><br><span class="line">            int j = i - 1;</span><br><span class="line">            temp = needSortArr[i];</span><br><span class="line">            for (; j &gt;= 0 &amp;&amp; temp &lt; needSortArr[j]; j--) &#123;</span><br><span class="line">                needSortArr[j + 1] = needSortArr[j];</span><br><span class="line">            &#125;</span><br><span class="line">            needSortArr[j + 1] = temp;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        for (int i : needSortArr) &#123;</span><br><span class="line">            System.out.print(i + &quot;\t&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="（完）"><a href="#（完）" class="headerlink" title="（完）"></a>（完）</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;实现&quot;&gt;&lt;a href=&quot;#实现&quot; class=&quot;headerlink&quot; title=&quot;实现&quot;&gt;&lt;/a&gt;实现&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span 
+      
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="zzhangffan.com/tags/Java/"/>
+    
+      <category term="排序算法" scheme="zzhangffan.com/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>命令模式</title>
