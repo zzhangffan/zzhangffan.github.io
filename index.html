@@ -90,7 +90,7 @@
         <ul class="search-result">
             
               <div class="tags">
-                   <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Command/">Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Observer/">Observer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/patterns/">patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li></ul>
+                   <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Command/">Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Observer/">Observer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReentrantLock/">ReentrantLock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sync/">Sync</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/patterns/">patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li></ul>
                 </div>
             
         </ul>
@@ -136,6 +136,113 @@
 
 <section class="post-list">
 	
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/20180308/ReentrantLock/">
+          ReentrantLock解析
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            3月 8, 2018
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/Java/">Java</a> / <a class="tag-link" href="/tags/ReentrantLock/">ReentrantLock</a> / <a class="tag-link" href="/tags/Sync/">Sync</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    示例在ReentrantLock中，调用 lock()方法获取锁；调用unlock()方法释放锁。1234567891011121314151617181920212223class ReentrantLockExample&#123;	i...
+
+    <div class="readmore">
+      <a href="/20180308/ReentrantLock/" class="iconfont icon-more">更多>>></a>
+    </div>
+
+  </section>
+</article>
+  
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/20180308/jmm/">
+          Java内存模型
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            3月 8, 2018
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/Java/">Java</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    
+Java内存模型定义了JVM操作内存的工作方式。
+
+指令重排序x86处理器只会对写-读操作做指令重排序！
+
+数据依赖性
+假设两个操作访问同一个变量，并且其中一个操作为写操作，那么这两个操作存在数据依赖性。
+
+写后读    a = 1;b ...
+
+    <div class="readmore">
+      <a href="/20180308/jmm/" class="iconfont icon-more">更多>>></a>
+    </div>
+
+  </section>
+</article>
+  
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/20180307/java-reference/">
+          Java引用
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            3月 7, 2018
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/Java/">Java</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    在JDK1.2之后，Java对引用概念进行了补充，将引用分为以下四种：
+
+强引用类似“Object obj = new Object()”这类的引用，只要强引用还存在，垃圾收集器永远不会回收掉被引用的对象。
+软引用对于软引用关联的对象，在系...
+
+    <div class="readmore">
+      <a href="/20180307/java-reference/" class="iconfont icon-more">更多>>></a>
+    </div>
+
+  </section>
+</article>
+  
     <article class="post   animated fade-in-top">
 
   <section class="post-header">
@@ -369,111 +476,6 @@
   </section>
 </article>
   
-    <article class="post   animated fade-in-top">
-
-  <section class="post-header">
-    
-      <h2 class="title">
-        <a href="/20180303/spring-transcation-propagation-behavior/">
-          Spring事务传播行为
-        </a>
-      </h2>
-      
-      <div class="subtitle">
-          <time>
-            3月 3, 2018
-          </time>
-          
-            <span class="tags">
-                 <span class="iconfont icon-tag"></span>
-                 <a class="tag-link" href="/tags/Framework/">Framework</a> / <a class="tag-link" href="/tags/Spring/">Spring</a>
-              </span>
-          
-      </div>
-  </section>
-  <section class="content">
-    
-Spring对事务的解决方案，是对 数据库事务 的补充或扩展。它是解决方法间的事务传播。
-
-事务传播行为Spring一共提供了7种事务传播行为：假设事务从方法A传播到了方法B，面对方法B他需要问一个问题：事务A有事务吗？
-
-PROPAGA...
-
-    <div class="readmore">
-      <a href="/20180303/spring-transcation-propagation-behavior/" class="iconfont icon-more">更多>>></a>
-    </div>
-
-  </section>
-</article>
-  
-    <article class="post   animated fade-in-top">
-
-  <section class="post-header">
-    
-      <h2 class="title">
-        <a href="/20180303/transaction/">
-          事务
-        </a>
-      </h2>
-      
-      <div class="subtitle">
-          <time>
-            3月 3, 2018
-          </time>
-          
-      </div>
-  </section>
-  <section class="content">
-    什么是事务
-事务，一般是指要做的或所做的事情。
-
-数据库事务数据库事务，是指作为单个逻辑工作单元执行的一系列操作,要么完全地执行,要么完全地不执行。
-事务的特性：
-
-原子性（基础）事务必须是一个不可分割的整体
-一致性（要求）事务（一组操作）...
-
-    <div class="readmore">
-      <a href="/20180303/transaction/" class="iconfont icon-more">更多>>></a>
-    </div>
-
-  </section>
-</article>
-  
-    <article class="post   animated fade-in-top">
-
-  <section class="post-header">
-    
-      <h2 class="title">
-        <a href="/20180301/hash-table/">
-          哈希表
-        </a>
-      </h2>
-      
-      <div class="subtitle">
-          <time>
-            3月 1, 2018
-          </time>
-          
-            <span class="tags">
-                 <span class="iconfont icon-tag"></span>
-                 <a class="tag-link" href="/tags/Java/">Java</a> / <a class="tag-link" href="/tags/hash-table/">hash-table</a>
-              </span>
-          
-      </div>
-  </section>
-  <section class="content">
-    了解哈希表前先了解两个数据结构：
-数组、链表
-数组一组同类型元素的集合，在内存中表现为一片连续的空间，其中每个数据单元占用相等大小的内存空间。因为空间是连续的，所以可以通过地址的偏移（数组下标）来快速访问，但当要新增或删除一个元素时，其后所...
-
-    <div class="readmore">
-      <a href="/20180301/hash-table/" class="iconfont icon-more">更多>>></a>
-    </div>
-
-  </section>
-</article>
-  
 </section>
 
 
@@ -507,7 +509,7 @@ PROPAGA...
       
         <h3>TAGS</h3>        
         <div class="tags">
-             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Command/">Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Observer/">Observer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/patterns/">patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li></ul>
+             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Command/">Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Observer/">Observer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReentrantLock/">ReentrantLock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sync/">Sync</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/patterns/">patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li></ul>
           </div>
       
     </div>

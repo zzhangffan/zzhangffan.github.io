@@ -87,8 +87,7 @@ a {
   .post:hover {
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1); }
   .post .post-header {
-    text-align: center;
-    text-transform: uppercase; }
+    text-align: center; }
     .post .post-header > h2 {
       font-size: 22px;
       line-height: 22px;
@@ -97,8 +96,7 @@ a {
         font-size: 23px; }
   .post .title {
     margin: 20px 0 10px 0;
-    text-align: center;
-    text-transform: uppercase; }
+    text-align: center; }
     .post .title a {
       color: #252525; }
   .post .subtitle {

@@ -4,22 +4,24 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Archives: 2018/1 | 张帆</title>
+  <title>Java引用 | 张帆</title>
   <meta name="description" content="zhangfan." />
   <meta name="keywords" content="zzhangffan,zhangfan" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="张帆 zhangfan zzhangffan">
-<meta property="og:type" content="website">
-<meta property="og:title" content="张帆">
-<meta property="og:url" content="zzhangffan.com/archives/2018/01/index.html">
+  <meta name="description" content="在JDK1.2之后，Java对引用概念进行了补充，将引用分为以下四种：  强引用类似“Object obj = new Object()”这类的引用，只要强引用还存在，垃圾收集器永远不会回收掉被引用的对象。 软引用对于软引用关联的对象，在系统将要发生内存溢出之前，会把这些对象进行回收。如果回收后还没有足够的内存，才会抛出内存溢出异常。JDK提供了SoftReference 类来实现软引用。 弱引用">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java引用">
+<meta property="og:url" content="zzhangffan.com/20180307/java-reference/index.html">
 <meta property="og:site_name" content="张帆">
-<meta property="og:description" content="张帆 zhangfan zzhangffan">
+<meta property="og:description" content="在JDK1.2之后，Java对引用概念进行了补充，将引用分为以下四种：  强引用类似“Object obj = new Object()”这类的引用，只要强引用还存在，垃圾收集器永远不会回收掉被引用的对象。 软引用对于软引用关联的对象，在系统将要发生内存溢出之前，会把这些对象进行回收。如果回收后还没有足够的内存，才会抛出内存溢出异常。JDK提供了SoftReference 类来实现软引用。 弱引用">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2018-03-07T08:54:30.453Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="张帆">
-<meta name="twitter:description" content="张帆 zhangfan zzhangffan">
+<meta name="twitter:title" content="Java引用">
+<meta name="twitter:description" content="在JDK1.2之后，Java对引用概念进行了补充，将引用分为以下四种：  强引用类似“Object obj = new Object()”这类的引用，只要强引用还存在，垃圾收集器永远不会回收掉被引用的对象。 软引用对于软引用关联的对象，在系统将要发生内存溢出之前，会把这些对象进行回收。如果回收后还没有足够的内存，才会抛出内存溢出异常。JDK提供了SoftReference 类来实现软引用。 弱引用">
   
   
     <link rel="icon" href="/image/favicon.ico">
@@ -128,58 +130,43 @@
     <script>NProgress.set(0.4);</script>
     
     <main id="main" role="main">
-      
-	
-
-
-	<section class="page-header archive">
-    <h1>- <span>2018.1</span> -</h1>
-  </section>
-
-
-
-
-<section class="post-list">
-	
-    <article class="post   animated fade-in-top">
-
-  <section class="post-header">
-    
-      <h2 class="title">
-        <a href="/20180111/linux-ls/">
-          Linux命令之ls
+      <article id="post-java-reference"
+  class="post article white-box article-type-post animated fade-in-top"
+  itemscope itemprop="blogPost">
+  <section class="post-header article-header">
+    <h2 class="title">
+        <a href="/20180307/java-reference/">
+          Java引用
         </a>
       </h2>
-      
       <div class="subtitle">
           <time>
-            1月 11, 2018
+            3月 7, 2018
           </time>
           
             <span class="tags">
-                 <span class="iconfont icon-tag"></span>
-                 <a class="tag-link" href="/tags/Linux/">Linux</a>
+                <span class="iconfont icon-tag"></span>
+                <a class="tag-link" href="/tags/Java/">Java</a>
               </span>
           
       </div>
   </section>
   <section class="content">
-    
-此为Linux命令使用系列记录，博主使用到了哪些命令就写了哪些，命令的参数也记录不全，用到的就写了，需要完整学习，请参考Linux命令大全(手册)_Linux常用命令行实例详解_Linux命令学习手册    
-
-作用ls命令用来显示目标列...
-
-    <div class="readmore">
-      <a href="/20180111/linux-ls/" class="iconfont icon-more">更多>>></a>
+    <div class="article-entry" itemprop="articleBody">
+      <p>在JDK1.2之后，Java对引用概念进行了补充，将引用分为以下四种：</p>
+<ol>
+<li>强引用<br>类似“Object obj = new Object()”这类的引用，只要强引用还存在，垃圾收集器永远不会回收掉被引用的对象。</li>
+<li>软引用<br>对于软引用关联的对象，在系统将要发生内存溢出之前，会把这些对象进行回收。如果回收后还没有足够的内存，才会抛出内存溢出异常。JDK提供了<code>SoftReference</code> 类来实现软引用。</li>
+<li>弱引用<br>用来描述非必须对象，但它的强度比软引用更弱，被弱引用关联的对象只能生存到下一次垃圾收集发生之前，当垃圾收集器工作时，无论当前内存是否足够，都会回收掉只被弱引用关联的对象。JDK提供了<code>WeakReference</code> 类来实现弱引用。</li>
+<li>虚引用<br>一个对象是否有虚引用的存在，完全不会影响其生存时间。同时也无法通过虚引用来取得一个对象实例。为一个对象设置虚引用的目的就是在其被垃圾收集器收集时收到一个系统通知。JDK提供了<code>PhantomReference</code> 类来实现虚引用。</li>
+</ol>
+<h1 id="（完）"><a href="#（完）" class="headerlink" title="（完）"></a>（完）</h1>
     </div>
-
   </section>
-</article>
+
   
-</section>
-
-
-
+  
+</article>
       <script>NProgress.set(0.6);</script>
     </main>
     

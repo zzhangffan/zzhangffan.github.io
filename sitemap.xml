@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>zzhangffan.com/20180308/ReentrantLock/</loc>
+    
+    <lastmod>2018-03-08T04:03:08.027Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>zzhangffan.com/20180308/jmm/</loc>
+    
+    <lastmod>2018-03-08T01:13:46.028Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>zzhangffan.com/20180307/java-reference/</loc>
+    
+    <lastmod>2018-03-07T08:54:30.453Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>zzhangffan.com/20180307/sortAlgorithm-quickSort/</loc>
     
     <lastmod>2018-03-07T06:59:29.860Z</lastmod>
