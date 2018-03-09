@@ -10,6 +10,16 @@
   <meta name="HandheldFriendly" content="True" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                location.href = "http://zzhangffan.com/";
+            }
+        }
+    })();
+  </script>
   <meta name="description" content="张帆 zhangfan zzhangffan">
 <meta property="og:type" content="website">
 <meta property="og:title" content="张帆">
@@ -23,6 +33,16 @@
   
   
     <link rel="icon" href="/image/favicon.ico">
+  
+
+  
+    <script>
+    (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+    daovoice('init', {
+        app_id: "2dc1a51d"
+      });
+    daovoice('update');
+    </script>
   
   
   <link rel='stylesheet' href='//cdnjs.xyz/libs/nprogress/0.2.0/nprogress.css'/>
@@ -141,6 +161,41 @@
 
 <section class="post-list">
 	
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/20180306/patterns-observer/">
+          观察者模式
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            3月 6, 2018
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/设计模式/">设计模式</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    
+观察者模式（行为型模式）：观察者观察被观察目标类的状态，被观察目标类管理所有观察它的组件，当自身状态发生改变时，通知所有的观察者组件。
+
+实现定义被观察目标：1234567891011121314151617181920212223242...
+
+    <div class="readmore">
+      <a href="/20180306/patterns-observer/" class="iconfont icon-more">更多>>></a>
+    </div>
+
+  </section>
+</article>
+  
     <article class="post   animated fade-in-top">
 
   <section class="post-header">
@@ -391,7 +446,15 @@ ThreadLocal用例假设我们有一个序列生成器，用于生成从1开始�
       
     </div>
     <div class="footer-info">
+        <div class="powered-by">
+        <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+          本站访客数:<span id="busuanzi_value_site_uv"></span>
+        </span>
+        <!-- npm install hexo-wordcount --save -->
+        <span class="footer-margin">博客全站共12.8k字</span>
+        </div>
         <div>Theme <span class="codename"><a href="https://github.com/GGICE/hexo-icer" target="_blank">icer</a></span> designed & coded by <a href="https://ice.gs/" target="_blank">GGICE</a></div>
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
         <div>Copyright &copy; 2017-2018, <a href="/">张帆</a>  . All rights reserved .</div>
       </div>
   </div>
@@ -413,6 +476,10 @@ ThreadLocal用例假设我们有一个序列生成器，用于生成从1开始�
   <script>
     NProgress.done();
   </script>
+
+  {% if theme.canvas_nest %}
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  {% endif %}
   
 </body>
 </html>

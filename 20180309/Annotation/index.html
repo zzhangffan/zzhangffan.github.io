@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>自定义注解 | 张帆</title>
+  <meta name="description" content="zhangfan." />
+  <meta name="keywords" content="zzhangffan,zhangfan" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script>
+    (function(){
+        if('123456'){
+            if (prompt('请输入文章密码') !== '123456'){
+                alert('密码错误！');
+                location.href = "http://zzhangffan.com/";
+            }
+        }
+    })();
+  </script>
+  <meta name="description" content="自定义注解看一个示例：1234567@Target(&amp;#123;ElementType.TYPE,ElementType.METHOD&amp;#125;)@Retention(RetentionPolicy.RUNTIME)@Inherited@Documentedpublic @interface SelfAnnotation &amp;#123;    String value() default &amp;quo">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自定义注解">
+<meta property="og:url" content="zzhangffan.com/20180309/Annotation/index.html">
+<meta property="og:site_name" content="张帆">
+<meta property="og:description" content="自定义注解看一个示例：1234567@Target(&amp;#123;ElementType.TYPE,ElementType.METHOD&amp;#125;)@Retention(RetentionPolicy.RUNTIME)@Inherited@Documentedpublic @interface SelfAnnotation &amp;#123;    String value() default &amp;quo">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2018-03-09T09:27:28.448Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自定义注解">
+<meta name="twitter:description" content="自定义注解看一个示例：1234567@Target(&amp;#123;ElementType.TYPE,ElementType.METHOD&amp;#125;)@Retention(RetentionPolicy.RUNTIME)@Inherited@Documentedpublic @interface SelfAnnotation &amp;#123;    String value() default &amp;quo">
+  
+  
+    <link rel="icon" href="/image/favicon.ico">
+  
+
+  
+    <script>
+    (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+    daovoice('init', {
+        app_id: "2dc1a51d"
+      });
+    daovoice('update');
+    </script>
+  
+  
+  <link rel='stylesheet' href='//cdnjs.xyz/libs/nprogress/0.2.0/nprogress.css'/>
+  <link rel="stylesheet" href="//cdnjs.xyz/libs/highlight/9.12.0/styles/github-gist.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_405585_2mmfrz9pgd7h9f6r.css">
+  <script src='//cdnjs.xyz/libs/nprogress/0.2.0/nprogress.js'></script>
+  <!-- <script>try{Typekit.load({ async: false });}catch(e){}</script> -->
+  <link rel="stylesheet" href="/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-93986029-1', 'auto');
+  ga('send', 'pageview');
+  
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  
+  <script>NProgress.start();</script>
+  
+  <div id="site-wrapper">
+    
+    <header class="header">
+  <div class="header-wrapper">
+    <a href="/">
+      <img src="/image/logo.jpg" class="logo"/>
+      <!-- <span class="site-desc">
+        
+      </span> -->
+    </a>
+    <div class="social-wrapper">
+      
+        
+          <a href="https://github.com/zzhangffan" class="social github" target="_blank" rel="external">
+            <span class="iconfont icon-github"></span>
+          </a>
+          
+          <a href="/atom.xml" class="social rss" target="_blank" rel="external">
+            <span class="iconfont icon-rss"></span>
+          </a>
+          
+      
+      
+      <a href="#" class="social search-do" target="_blank" rel="external">
+        <span class="iconfont icon-search"></span>
+      </a>
+            
+      <!-- <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="zzhangffan.com"></form> -->
+    </div>
+    <div class="search-wrap">
+      <div class="search-content animated fade-in">
+        <p class="search-input">
+          <span class="iconfont icon-search"></span>
+          <input tabindex="1">
+        </p>
+        <ul class="search-result">
+            
+              <div class="tags">
+                   <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Concurrency/">Concurrency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+                </div>
+            
+        </ul>
+      </div>
+    </div>
+    <nav class="header-nav">
+      
+        <a href="/" class="archives">
+          home
+        </a>
+        
+        <a href="/tags/Java/" class="archives">
+          Java
+        </a>
+        
+        <a href="/tags/Framework/" class="archives">
+          Framework
+        </a>
+        
+        <a href="/tags/live/" class="archives">
+          live
+        </a>
+        
+        <a href="/archives" class="archives">
+          archives
+        </a>
+        
+        <a href="/about/" class="archives">
+          About
+        </a>
+        
+    </nav>
+  </div>
+</header>
+    <script>NProgress.set(0.4);</script>
+    
+    <main id="main" role="main">
+      <article id="post-Annotation"
+  class="post article white-box article-type-post animated fade-in-top"
+  itemscope itemprop="blogPost">
+  <section class="post-header article-header">
+    <h2 class="title">
+        <a href="/20180309/Annotation/">
+          自定义注解
+        </a>
+      </h2>
+      <div class="subtitle">
+          <time>
+            3月 9, 2018
+          </time>
+          
+            <span class="tags">
+                <span class="iconfont icon-tag"></span>
+                <a class="tag-link" href="/tags/Java/">Java</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    <div class="article-entry" itemprop="articleBody">
+      <h2 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h2><p>看一个示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@Target(&#123;ElementType.TYPE,ElementType.METHOD&#125;)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@Inherited</span><br><span class="line">@Documented</span><br><span class="line">public @interface SelfAnnotation &#123;</span><br><span class="line">    String value() default &quot;&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>使用 <code>@interface</code> 来声明一个注解。</li>
+<li>注解类中的“方法”（成员变量）以无参无异常的方式声明，可以使用 default 指定默认值。</li>
+<li>注解中的成员类型是有限制的，合法的有基本数据类型和 String , Class , Annotation , Enumeration等。</li>
+<li>注解类可以没有成员，没有成员的注解成为标识注解（就跟标识接口差不多）。</li>
+</ul>
+<p><strong>元注解:</strong><br>注解类上的注解称为元注解：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Target(&#123;ElementType.TYPE,ElementType.METHOD&#125;)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@Inherited</span><br><span class="line">@Documented</span><br></pre></td></tr></table></figure></p>
+<p>第一行： @Target 指明这个注解的作用域，<code>ElementType</code> 是一个包含注解作用域的枚举类，其中类型包括：<br><code>TYPE（类、接口） FIELD（字段声明）METHOD（方法声明）PARAMETER（参数声明）CONSTRUCTOR（构造函数声明）LOCAL_VARIABLE（局部变量声明）ANNOTATION_TYPE（注解声明）PACKAGE（包声明）</code></p>
+<p>第二行： @Retention 指定注解的生命周期，这里 <code>RetentionPolicy</code> 同样是一个枚举类，它囊括了注解的生命周期，其中包括：<br><code>SOURCE（源码显示，编译时丢弃）CLASS（编译保留，运行时丢弃）RUNTIME（运行时存在，可反射获取）</code></p>
+<p>第三行： @Inherited 注解表示此注解可以被继承（一个类被此注解修饰的注解修饰时，其子类自动继承该注解）</p>
+<p>第四行： @Documented 表示生成 javadoc 时包含注解信息</p>
+<h2 id="使用注解"><a href="#使用注解" class="headerlink" title="使用注解"></a>使用注解</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@SelfAnnotation(&quot;我在类上&quot;)</span><br><span class="line">public class SelfAnnotationTest &#123;</span><br><span class="line"></span><br><span class="line">    @SelfAnnotation(&quot;我在方法上&quot;)</span><br><span class="line">    public void hasAnnotationMethod()&#123;</span><br><span class="line">        System.out.println(&quot;我是有注解的方法&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void otherMethod()&#123;</span><br><span class="line">        System.out.println(&quot;我没有注解&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码使用了刚才自定义的注解修饰了类和方法，其他的例如属性则无法被修饰。</p>
+<h2 id="解析注解"><a href="#解析注解" class="headerlink" title="解析注解"></a>解析注解</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnnotationProcessor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//加载指定的类</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Class cla = Class.forName(<span class="string">"test.SelfAnnotationTest"</span>);</span><br><span class="line">            <span class="comment">//被指定注解修饰</span></span><br><span class="line">            <span class="keyword">if</span> (cla.isAnnotationPresent(SelfAnnotation.class)) &#123;</span><br><span class="line">                <span class="comment">//获取类上注解信息</span></span><br><span class="line">                SelfAnnotation selfAnnotation</span><br><span class="line">                        = (SelfAnnotation) cla.getAnnotation(SelfAnnotation.class);</span><br><span class="line">                System.out.println(selfAnnotation.value());</span><br><span class="line"></span><br><span class="line">                <span class="comment">//解析方法上注解信息</span></span><br><span class="line">                <span class="comment">//获取所有方法</span></span><br><span class="line">                Method[] methods = cla.getDeclaredMethods();</span><br><span class="line">                <span class="keyword">for</span> (Method method : methods) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (method.isAnnotationPresent(SelfAnnotation.class)) &#123;</span><br><span class="line">                        <span class="comment">//执行被指定注解修饰的方法</span></span><br><span class="line">                        method.invoke(<span class="keyword">new</span> SelfAnnotationTest(), <span class="keyword">null</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InvocationTargetException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里的处理有些简单了，其实我们可以做很多事情。</p>
+<p>程序运行结果：</p>
+<blockquote>
+<p>我在类上<br>我是有注解的方法</p>
+</blockquote>
+<h1 id="（完）"><a href="#（完）" class="headerlink" title="（完）"></a>（完）</h1>
+    </div>
+  </section>
+
+  
+  
+</article>
+      <script>NProgress.set(0.6);</script>
+    </main>
+    
+    <footer class="footer">
+  <div class="footer-wrap">
+    <div class="footer-link">
+      
+      <h3>LINKS</h3>
+      <p>
+        
+          <a href="" target="_blank"></a>
+        
+      </p>
+      
+    </div>
+    <div class="footer-tags">
+      
+        <h3>TAGS</h3>        
+        <div class="tags">
+             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Concurrency/">Concurrency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+          </div>
+      
+    </div>
+    <div class="footer-info">
+        <div class="powered-by">
+        <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+          本站访客数:<span id="busuanzi_value_site_uv"></span>
+        </span>
+        <!-- npm install hexo-wordcount --save -->
+        <span class="footer-margin">博客全站共12.8k字</span>
+        </div>
+        <div>Theme <span class="codename"><a href="https://github.com/GGICE/hexo-icer" target="_blank">icer</a></span> designed & coded by <a href="https://ice.gs/" target="_blank">GGICE</a></div>
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <div>Copyright &copy; 2017-2018, <a href="/">张帆</a>  . All rights reserved .</div>
+      </div>
+  </div>
+</footer>
+
+
+    <script>NProgress.set(0.8);</script>
+    
+  </div>
+
+  <script src="//cdnjs.xyz/libs/highlight/9.12.0/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/main.js"></script>
+
+<!-- Commit -->
+
+
+
+  <script>
+    NProgress.done();
+  </script>
+
+  {% if theme.canvas_nest %}
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  {% endif %}
+  
+</body>
+</html>

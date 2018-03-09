@@ -10,6 +10,16 @@
   <meta name="HandheldFriendly" content="True" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                location.href = "http://zzhangffan.com/";
+            }
+        }
+    })();
+  </script>
   <meta name="description" content="了解哈希表前先了解两个数据结构： 数组、链表 数组一组同类型元素的集合，在内存中表现为一片连续的空间，其中每个数据单元占用相等大小的内存空间。因为空间是连续的，所以可以通过地址的偏移（数组下标）来快速访问，但当要新增或删除一个元素时，其后所有元素要进行相应的移动。  图片来自菜鸟教程   链表是一种物理上非连续、非顺序的数据结构。由一系列节点组成，每个节点除了保存自己的数据还保存了一个指向后继节点">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
@@ -33,6 +43,16 @@
   
   
     <link rel="icon" href="/image/favicon.ico">
+  
+
+  
+    <script>
+    (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+    daovoice('init', {
+        app_id: "2dc1a51d"
+      });
+    daovoice('update');
+    </script>
   
   
   <link rel='stylesheet' href='//cdnjs.xyz/libs/nprogress/0.2.0/nprogress.css'/>
@@ -235,7 +255,15 @@
       
     </div>
     <div class="footer-info">
+        <div class="powered-by">
+        <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+          本站访客数:<span id="busuanzi_value_site_uv"></span>
+        </span>
+        <!-- npm install hexo-wordcount --save -->
+        <span class="footer-margin">博客全站共12.8k字</span>
+        </div>
         <div>Theme <span class="codename"><a href="https://github.com/GGICE/hexo-icer" target="_blank">icer</a></span> designed & coded by <a href="https://ice.gs/" target="_blank">GGICE</a></div>
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
         <div>Copyright &copy; 2017-2018, <a href="/">张帆</a>  . All rights reserved .</div>
       </div>
   </div>
@@ -257,6 +285,10 @@
   <script>
     NProgress.done();
   </script>
+
+  {% if theme.canvas_nest %}
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  {% endif %}
   
 </body>
 </html>
