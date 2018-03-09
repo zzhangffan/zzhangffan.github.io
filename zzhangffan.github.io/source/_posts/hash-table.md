@@ -2,7 +2,7 @@
 title: 哈希表
 date: 2018-03-01 08:54:00
 categoreies:
-tags: [Java,hash-table]
+tags: Java
 ---
 了解哈希表前先了解两个数据结构：
 ### 数组、链表 ###

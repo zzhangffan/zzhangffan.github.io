@@ -10,9 +10,9 @@ navigation:
 - name: Java
   slug: Java
   url: /tags/Java/
-- name: Web
-  slug: Web
-  url: /tags/Web/
+- name: Framework
+  slug: Framework
+  url: /tags/Framework/
 - name: live
   slug: live
   url: /tags/live/
@@ -46,3 +46,14 @@ local_search:
 
 # Favicon
 favicon: /image/favicon.ico
+
+# background
+canvas_nest:  true
+
+# Online contact 
+daovoice: true
+daovoice_app_id: 2dc1a51d
+
+# Progress bar in the top during page loading.
+pace: true
+pace_theme: pace-theme-minimal

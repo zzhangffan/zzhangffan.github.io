@@ -2,7 +2,7 @@
 title: ThreadLocal分析
 date: 2018-02-28 13:00:28
 categoreies:
-tags: [Java,ThreadLocal]
+tags: [Java,Concurrency]
 ---
 >ThreadLocal 位于java.lang包下，用来为线程提供局部变量。
 

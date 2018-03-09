@@ -2,7 +2,7 @@
 title: jdk及CGLib代理
 date: 2018-02-27 14:03:00
 categoreies:
-tags: [CGLib,Proxy,Java]
+tags: [Java,Proxy]
 ---
 > 代理：为其他对象提供一种代理以控制对这个对象的访问。
 
@@ -227,8 +227,8 @@ public class ProxyInterceptor implements MethodInterceptor{
 ```
 代理类具体实现（来自网络）：
 ```
-public class HelloConcrete$$EnhancerByCGLIB$$e3734e52
-  extends HelloConcrete
+public class Hello$$EnhancerByCGLIB$$e3734e52
+  extends Hello
   implements Factory
 {
   ...
