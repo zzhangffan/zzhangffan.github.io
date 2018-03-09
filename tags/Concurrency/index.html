@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Tag: hash-table | 张帆</title>
+  <title>Tag: Concurrency | 张帆</title>
   <meta name="description" content="zhangfan." />
   <meta name="keywords" content="zzhangffan,zhangfan" />
   <meta name="HandheldFriendly" content="True" />
@@ -13,7 +13,7 @@
   <meta name="description" content="张帆 zhangfan zzhangffan">
 <meta property="og:type" content="website">
 <meta property="og:title" content="张帆">
-<meta property="og:url" content="zzhangffan.com/tags/hash-table/index.html">
+<meta property="og:url" content="zzhangffan.com/tags/Concurrency/index.html">
 <meta property="og:site_name" content="张帆">
 <meta property="og:description" content="张帆 zhangfan zzhangffan">
 <meta property="og:locale" content="zh_CN">
@@ -90,7 +90,7 @@
         <ul class="search-result">
             
               <div class="tags">
-                   <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Command/">Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Observer/">Observer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReentrantLock/">ReentrantLock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sync/">Sync</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/patterns/">patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li></ul>
+                   <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Concurrency/">Concurrency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
                 </div>
             
         </ul>
@@ -130,7 +130,7 @@
     <main id="main" role="main">
       
 	<section class="page-header tag">
-    <h1>- <span>hash-table</span> -</h1>
+    <h1>- <span>Concurrency</span> -</h1>
   </section>
 
 
@@ -145,30 +145,63 @@
   <section class="post-header">
     
       <h2 class="title">
-        <a href="/20180301/hash-table/">
-          哈希表
+        <a href="/20180308/ReentrantLock/">
+          ReentrantLock解析
         </a>
       </h2>
       
       <div class="subtitle">
           <time>
-            3月 1, 2018
+            3月 8, 2018
           </time>
           
             <span class="tags">
                  <span class="iconfont icon-tag"></span>
-                 <a class="tag-link" href="/tags/Java/">Java</a> / <a class="tag-link" href="/tags/hash-table/">hash-table</a>
+                 <a class="tag-link" href="/tags/Concurrency/">Concurrency</a> / <a class="tag-link" href="/tags/Java/">Java</a>
               </span>
           
       </div>
   </section>
   <section class="content">
-    了解哈希表前先了解两个数据结构：
-数组、链表
-数组一组同类型元素的集合，在内存中表现为一片连续的空间，其中每个数据单元占用相等大小的内存空间。因为空间是连续的，所以可以通过地址的偏移（数组下标）来快速访问，但当要新增或删除一个元素时，其后所...
+    示例在ReentrantLock中，调用 lock()方法获取锁；调用unlock()方法释放锁。1234567891011121314151617181920212223class ReentrantLockExample&#123;	i...
 
     <div class="readmore">
-      <a href="/20180301/hash-table/" class="iconfont icon-more">更多>>></a>
+      <a href="/20180308/ReentrantLock/" class="iconfont icon-more">更多>>></a>
+    </div>
+
+  </section>
+</article>
+  
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/20180228/threadlocal-analyze/">
+          ThreadLocal分析
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            2月 28, 2018
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/Concurrency/">Concurrency</a> / <a class="tag-link" href="/tags/Java/">Java</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    
+ThreadLocal 位于java.lang包下，用来为线程提供局部变量。
+
+ThreadLocal用例假设我们有一个序列生成器，用于生成从1开始，自增为1的序列，代码如下：123456789101112131415public cla...
+
+    <div class="readmore">
+      <a href="/20180228/threadlocal-analyze/" class="iconfont icon-more">更多>>></a>
     </div>
 
   </section>
@@ -196,7 +229,7 @@
       
         <h3>TAGS</h3>        
         <div class="tags">
-             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Command/">Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Observer/">Observer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReentrantLock/">ReentrantLock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sync/">Sync</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/patterns/">patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li></ul>
+             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Concurrency/">Concurrency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
           </div>
       
     </div>

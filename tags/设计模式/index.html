@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Tag: ThreadLocal | 张帆</title>
+  <title>Tag: 设计模式 | 张帆</title>
   <meta name="description" content="zhangfan." />
   <meta name="keywords" content="zzhangffan,zhangfan" />
   <meta name="HandheldFriendly" content="True" />
@@ -13,7 +13,7 @@
   <meta name="description" content="张帆 zhangfan zzhangffan">
 <meta property="og:type" content="website">
 <meta property="og:title" content="张帆">
-<meta property="og:url" content="zzhangffan.com/tags/ThreadLocal/index.html">
+<meta property="og:url" content="zzhangffan.com/tags/设计模式/index.html">
 <meta property="og:site_name" content="张帆">
 <meta property="og:description" content="张帆 zhangfan zzhangffan">
 <meta property="og:locale" content="zh_CN">
@@ -90,7 +90,7 @@
         <ul class="search-result">
             
               <div class="tags">
-                   <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Command/">Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Observer/">Observer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReentrantLock/">ReentrantLock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sync/">Sync</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/patterns/">patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li></ul>
+                   <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Concurrency/">Concurrency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
                 </div>
             
         </ul>
@@ -130,7 +130,7 @@
     <main id="main" role="main">
       
 	<section class="page-header tag">
-    <h1>- <span>ThreadLocal</span> -</h1>
+    <h1>- <span>设计模式</span> -</h1>
   </section>
 
 
@@ -145,31 +145,101 @@
   <section class="post-header">
     
       <h2 class="title">
-        <a href="/20180228/threadlocal-analyze/">
-          ThreadLocal分析
+        <a href="/20180306/patterns-command/">
+          命令模式
         </a>
       </h2>
       
       <div class="subtitle">
           <time>
-            2月 28, 2018
+            3月 6, 2018
           </time>
           
             <span class="tags">
                  <span class="iconfont icon-tag"></span>
-                 <a class="tag-link" href="/tags/Java/">Java</a> / <a class="tag-link" href="/tags/ThreadLocal/">ThreadLocal</a>
+                 <a class="tag-link" href="/tags/设计模式/">设计模式</a>
               </span>
           
       </div>
   </section>
   <section class="content">
     
-ThreadLocal 位于java.lang包下，用来为线程提供局部变量。
+命令模式（行为型模式）：封装命令，将命令的发出者与执行者之间解耦。
 
-ThreadLocal用例假设我们有一个序列生成器，用于生成从1开始，自增为1的序列，代码如下：123456789101112131415public cla...
+实现创建命令执行者类：123456public class Receiver &#123;    public void action() &#123;        ...
 
     <div class="readmore">
-      <a href="/20180228/threadlocal-analyze/" class="iconfont icon-more">更多>>></a>
+      <a href="/20180306/patterns-command/" class="iconfont icon-more">更多>>></a>
+    </div>
+
+  </section>
+</article>
+  
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/20180306/patterns-responsibility-chain/">
+          责任链模式
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            3月 6, 2018
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/设计模式/">设计模式</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    
+责任链模式（行为型模式）：让多个对象都有机会处理请求，将这些对象连成一条链，处理请求时，让请求在这个链上传递，直到链式的摸一个对象处理了这个请求。避免请求的发送者与处理者耦合。
+
+实现定义一个日志处理模板类：123456789101112...
+
+    <div class="readmore">
+      <a href="/20180306/patterns-responsibility-chain/" class="iconfont icon-more">更多>>></a>
+    </div>
+
+  </section>
+</article>
+  
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/20180306/patterns-observer/">
+          观察者模式
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            3月 6, 2018
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/设计模式/">设计模式</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    
+观察者模式（行为型模式）：观察者观察被观察目标类的状态，被观察目标类管理所有观察它的组件，当自身状态发生改变时，通知所有的观察者组件。
+
+实现定义被观察目标：1234567891011121314151617181920212223242...
+
+    <div class="readmore">
+      <a href="/20180306/patterns-observer/" class="iconfont icon-more">更多>>></a>
     </div>
 
   </section>
@@ -197,7 +267,7 @@ ThreadLocal用例假设我们有一个序列生成器，用于生成从1开始�
       
         <h3>TAGS</h3>        
         <div class="tags">
-             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Command/">Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Observer/">Observer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReentrantLock/">ReentrantLock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sync/">Sync</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/patterns/">patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li></ul>
+             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Concurrency/">Concurrency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
           </div>
       
     </div>

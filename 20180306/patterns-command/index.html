@@ -11,14 +11,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="命令模式（行为型模式）：封装命令，将命令的发出者与执行者之间解耦。  实现创建命令执行者类：123456public class Receiver &amp;#123;    public void action() &amp;#123;        System.out.println(&amp;quot;Receiver::action&amp;quot;);    &amp;#125;&amp;#125; 创建命令接口：1234pub">
-<meta name="keywords" content="patterns,Command">
+<meta name="keywords" content="设计模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="命令模式">
 <meta property="og:url" content="zzhangffan.com/20180306/patterns-command/index.html">
 <meta property="og:site_name" content="张帆">
 <meta property="og:description" content="命令模式（行为型模式）：封装命令，将命令的发出者与执行者之间解耦。  实现创建命令执行者类：123456public class Receiver &amp;#123;    public void action() &amp;#123;        System.out.println(&amp;quot;Receiver::action&amp;quot;);    &amp;#125;&amp;#125; 创建命令接口：1234pub">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2018-03-07T00:11:50.068Z">
+<meta property="og:updated_time" content="2018-03-09T01:06:17.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="命令模式">
 <meta name="twitter:description" content="命令模式（行为型模式）：封装命令，将命令的发出者与执行者之间解耦。  实现创建命令执行者类：123456public class Receiver &amp;#123;    public void action() &amp;#123;        System.out.println(&amp;quot;Receiver::action&amp;quot;);    &amp;#125;&amp;#125; 创建命令接口：1234pub">
@@ -92,7 +92,7 @@
         <ul class="search-result">
             
               <div class="tags">
-                   <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Command/">Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Observer/">Observer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReentrantLock/">ReentrantLock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sync/">Sync</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/patterns/">patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li></ul>
+                   <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Concurrency/">Concurrency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
                 </div>
             
         </ul>
@@ -146,7 +146,7 @@
           
             <span class="tags">
                 <span class="iconfont icon-tag"></span>
-                <a class="tag-link" href="/tags/Command/">Command</a> / <a class="tag-link" href="/tags/patterns/">patterns</a>
+                <a class="tag-link" href="/tags/设计模式/">设计模式</a>
               </span>
           
       </div>
@@ -192,7 +192,7 @@
       
         <h3>TAGS</h3>        
         <div class="tags">
-             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CGLib/">CGLib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Command/">Command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Observer/">Observer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReentrantLock/">ReentrantLock</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ResponsibilityChain/">ResponsibilityChain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sync/">Sync</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ThreadLocal/">ThreadLocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash-table/">hash-table</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/patterns/">patterns</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li></ul>
+             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Concurrency/">Concurrency</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Framework/">Framework</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/排序算法/">排序算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
           </div>
       
     </div>

@@ -124,7 +124,6 @@ a {
       opacity: 1;
       margin-left: 105%; }
   .post .tags {
-    text-transform: uppercase;
     text-align: center; }
   .post .icon-tag {
     font-size: 12px; }
