@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>zzhangffan.com/20180227/proxy/</loc>
+    
+    <lastmod>2018-03-20T11:28:12.969Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>zzhangffan.com/20171231/hexo-github-pages/</loc>
     
     <lastmod>2018-03-09T11:20:02.974Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>zzhangffan.com/20180306/patterns-responsibility-chain/</loc>
     
     <lastmod>2018-03-09T01:05:56.749Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>zzhangffan.com/20180227/proxy/</loc>
-    
-    <lastmod>2018-03-09T01:05:33.313Z</lastmod>
     
   </url>
   
